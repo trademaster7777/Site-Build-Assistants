@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "M&K Contractors LLC"
+version = "1.0.0"
+id = "artifacts/mk-contractors"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18708
+
+[services.development]
+run = "pnpm --filter @workspace/mk-contractors run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mk-contractors", "run", "build" ]
+publicDir = "artifacts/mk-contractors/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18708"
+BASE_PATH = "/"

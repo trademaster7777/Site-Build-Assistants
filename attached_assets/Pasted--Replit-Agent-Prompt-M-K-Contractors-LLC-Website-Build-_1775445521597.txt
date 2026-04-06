@@ -1,0 +1,381 @@
+# Replit Agent Prompt — M&K Contractors LLC Website Build
+
+## PROJECT OVERVIEW
+
+Build a complete, production-ready website for **M&K Contractors LLC** — a specialty excavation and site contracting firm in Pennsylvania. The site will be hosted on SiteGround at **mkcontractorspa.com**. Use **Next.js (App Router)** with **Tailwind CSS** and deploy-ready static export. The site must be fully responsive, SEO-optimized, and designed to generate inbound leads from general contractors and municipalities.
+
+-----
+
+## TECH STACK
+
+- **Framework:** Next.js 14+ (App Router, static export via `output: 'export'`)
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Fonts:** Google Fonts — `Montserrat` (headings, bold weight) + `Inter` (body, regular weight)
+- **Form handling:** Client-side validation; form submissions via Formspree or a simple API route (configurable endpoint)
+- **Images:** Use Next.js `<Image>` component with placeholder divs labeled with descriptive text (client will supply real photos — NO stock or AI images)
+- **Schema markup:** JSON-LD structured data embedded in `<head>` of each page
+- **Analytics-ready:** Include a placeholder for Google Analytics / Google Tag Manager snippet in the layout
+
+-----
+
+## DESIGN SYSTEM
+
+### Color Palette
+
+|Token          |Hex      |Usage                                           |
+|---------------|---------|------------------------------------------------|
+|`primary-dark` |`#1C1C1E`|Backgrounds, header, footer, dark sections      |
+|`primary-light`|`#F5F5F5`|Text areas, light backgrounds                   |
+|`accent`       |`#FFB800`|CTA buttons, highlights, hover states           |
+|`accent-alt`   |`#FF6B00`|Secondary accent (safety orange), used sparingly|
+|`secondary`    |`#3A3A3C`|Cards, secondary sections, muted text           |
+|`white`        |`#FFFFFF`|Contrast, card backgrounds                      |
+
+### Typography
+
+- **Headings (H1–H3):** Montserrat Bold, uppercase optional for H1
+- **Body / paragraphs:** Inter Regular, 16px base, 1.6 line-height
+- **Buttons:** Inter Semi-Bold, uppercase, letter-spacing 0.05em
+
+### Design Feel
+
+“Industrial, constructiony, but clean and fresh.” Modern industrial aesthetic — strong, professional, grounded. NOT futuristic, NOT overly corporate. Think: dark backgrounds, bold yellow accents, clean whitespace, real photography.
+
+### Layout Principles
+
+- Full-width sections with generous vertical padding (py-16 to py-24)
+- Grid-based service cards (responsive: 1 col mobile, 2 col tablet, 3 col desktop)
+- Sticky header navigation
+- Prominent CTA buttons on every page
+- No emojis anywhere on the site
+
+### Navigation (Sticky Header)
+
+- **Top utility bar** (small, dark): Phone number `(267) 221-6226` | Hours: `Mon–Fri 7:00 AM – 5:00 PM` | Location: `Pennsylvania`
+- **Main nav:** Logo (left) | Home | About Us | Services (dropdown) | Projects | Contact Us | **[Request a Quote]** button (right, accent color)
+- **Mobile:** Hamburger menu, click-to-call phone, thumb-friendly CTA
+
+-----
+
+## SITE ARCHITECTURE & PAGES
+
+Build the following 9 pages:
+
+```
+/ (Home)
+/about-us
+/services/public-sector-infrastructure
+/services/commercial-site-development
+/services/utility-excavation
+/services/demolition
+/services/retaining-walls
+/projects
+/contact
+```
+
+The “Services” nav item should be a dropdown linking to all 5 service subpages.
+
+-----
+
+## PAGE-BY-PAGE SPECIFICATIONS
+
+### 1. HOME PAGE (`/`)
+
+**Hero Section:**
+
+- Full-width background image placeholder (dark overlay at 60% opacity)
+- H1: `Precision Excavation & Site Contracting Across Pennsylvania`
+- Subheadline: `We do our own work — no subcontracting, no middlemen. Just reliable, expert site development and infrastructure excavation from a dedicated team with over 20 years of combined experience.`
+- Primary CTA button: `Request a Project Evaluation` → links to `/contact`
+- Secondary CTA button (outline style): `View Our Projects` → links to `/projects`
+
+**Trust Bar:**
+
+- Horizontal strip below hero, dark background, accent-colored icons, white text
+- 4 items: `20+ Years Combined Experience` | `Family Owned & Operated` | `Fully Licensed & Insured` | `5-Star Google Rated`
+
+**“The M&K Difference” Section:**
+
+- H2: `Built Different. Built to Last.`
+- 2-column layout: text left, image placeholder right
+- Copy: “At M&K Contractors, we take pride in staying small and focused so we can deliver results that larger firms cannot match. When you hire us, you work directly with the owners — not a project coordinator three layers removed from the job site. We do not subcontract our work to third parties. Our own crew, our own specialized equipment, and our own commitment to quality show up to every project. Whether it is a complex public water infrastructure installation or large-scale commercial site grading, the team you hired is the team doing the work. That direct accountability is why general contractors and municipalities across Pennsylvania trust us with their most critical excavation and site development needs.”
+- CTA link: `Learn More About Us →` → `/about-us`
+
+**Our Services Section:**
+
+- H2: `What We Do`
+- Subheadline: `Specialized excavation and site contracting services for commercial and public sector projects throughout Pennsylvania.`
+- 5 service cards in responsive grid. Each card has:
+  - Image placeholder background
+  - Lucide icon
+  - Title
+  - One-line description
+  - “Learn More →” link to the service page
+- Services:
+1. **Public Sector & Infrastructure** — Municipal water, wastewater, and infrastructure excavation for government and public works projects. → `/services/public-sector-infrastructure`
+1. **Commercial Site Development** — Complete site preparation, grading, land clearing, and earthwork for commercial construction. → `/services/commercial-site-development`
+1. **Utility Excavation** — Precision trenching for water, sewer, stormwater, and conduit installations. → `/services/utility-excavation`
+1. **Demolition Services** — Controlled structural demolition, concrete removal, and site clearing. → `/services/demolition`
+1. **Retaining Walls & Hardscaping** — Structural retaining wall preparation and commercial hardscape grading. → `/services/retaining-walls`
+
+**Project Showcase Section:**
+
+- H2: `Real Work. Real Results.`
+- Copy: `Every photo on this site is from an actual M&K Contractors job site in Pennsylvania. We believe the best proof of our capabilities is the work itself.`
+- Grid of 6 image placeholders with captions (e.g., “Stormwater Pipe Installation — Montgomery County, PA”)
+- CTA: `View Full Portfolio →` → `/projects`
+
+**Testimonials Section:**
+
+- H2: `What Our Clients Say`
+- 3 testimonial cards in a row (carousel on mobile). Each card shows: star rating (5 stars), quote text, reviewer name, “Reviewed on Google” badge.
+- Testimonial 1: “Great company to work with. They answered all of my questions, did exactly the job they said they would, and had a very fair price for the work performed. I would work with M&K again any day.” — Verified Google Review
+- Testimonial 2: “I hired M&K to fill an old septic pit; some excavation and concrete work. They gave a prompt response to a request to view the job and provide a quote. Good communication. Completed job to plan and quickly. Pricing was good too.” — Matthew D., Verified Google Review
+- Testimonial 3: “Recently used this company for a difficult job and felt other companies rake you through the coals with pricing. They were great, finished project early, easy to contact, very knowledgeable.” — Brandon, Verified Google Review
+
+**Service Area Section:**
+
+- H2: `Serving Pennsylvania`
+- Copy: `M&K Contractors serves commercial and public sector clients across Eastern and Central Pennsylvania. Our primary service area includes Bucks County, Montgomery County, Chester County, Delaware County, Lehigh County, Northampton County, Berks County, and the greater Philadelphia metropolitan region. Contact us to confirm availability for your specific project location.`
+
+**Bottom CTA Section:**
+
+- Full-width dark section with accent CTA button
+- H2: `Ready to Break Ground?`
+- Copy: `Submit your project details today. We provide free site evaluations and written proposals within one week — no strings attached.`
+- CTA: `Get Your Free Estimate →` → `/contact`
+
+-----
+
+### 2. ABOUT US PAGE (`/about-us`)
+
+**Hero:** Full-width image placeholder, dark overlay. H1: `About M&K Contractors`. Subheadline: `Built on Honesty, Knowledge, and 20+ Years of Hands-On Experience.`
+
+**Our Story Section:**
+
+- H2: `A Foundation of Expertise`
+- Copy: “M&K Contractors LLC was founded in 2018 by Mike and Sam — two industry veterans with a combined 20-plus years of experience in excavation, heavy equipment operation, and site contracting. The company was built from the ground up with a straightforward philosophy: do the work right, do it ourselves, and treat every client with complete transparency. What started as a small operation has grown into a trusted specialty contracting firm serving general contractors, developers, and municipalities across Pennsylvania. Despite that growth, we have intentionally stayed small. We believe that a focused, owner-operated team delivers better results than a sprawling organization where accountability gets lost in layers of management. Every project we take on is executed by our own crew using our own equipment. We do not subcontract our work out to third parties. When you call M&K, you speak directly with the people who will be on your job site. That level of direct communication and personal accountability is rare in this industry — and it is exactly what sets us apart.”
+
+**Why Choose M&K Section:**
+
+- H2: `Why General Contractors and Municipalities Choose Us`
+- 4-column feature grid (2x2 on tablet, 1 col on mobile) with Lucide icons:
+1. **Direct Owner Contact** — You will never be passed off to a call center or a junior project manager. Mike and Sam are personally involved in every project from bid to completion.
+1. **No Subcontracting — Ever** — When you hire M&K Contractors, our team shows up. We do not win work just to hand it off to someone else.
+1. **Specialized Equipment Fleet** — We own and maintain a fleet of excavators, skid steers, compactors, and dump trucks purpose-built for the work we do.
+1. **Competitive, Transparent Pricing** — We provide detailed, written proposals within one week of a site evaluation. Our pricing is fair, our communication is clear.
+
+**Our Capabilities Section:**
+
+- H2: `What We Bring to the Job Site`
+- Copy about equipment fleet
+- Equipment grid (image placeholder + caption for each):
+  - Track Skid Steers (e.g., Kubota SVL97) — Site grading, backfill, material handling
+  - Mini Excavators (e.g., Komatsu PC55) — Precision trenching, utility excavation
+  - Compactors (e.g., Bomag Trench Roller) — Soil and trench compaction
+  - Articulated Dump Trucks — Bulk material hauling and earthmoving
+
+**CTA Section:** H2: `Let's Talk About Your Next Project`. CTA: `Request a Project Evaluation →` → `/contact`
+
+-----
+
+### 3–7. SERVICE PAGES (5 pages)
+
+Each service page follows the SAME template structure. Build a reusable `ServicePage` component that accepts props for the unique content. Structure:
+
+1. **Hero** — Full-width image placeholder, dark overlay, H1, subheadline
+1. **Overview** — H2 + 2 paragraphs of copy
+1. **Core Capabilities** — H2 + 3–5 capability blocks (each with H3 title + paragraph)
+1. **Why Trust / Differentiator** — H2 + copy block (only on Public Sector page)
+1. **FAQ Section** — H2: `Frequently Asked Questions` + accordion-style Q&A (3–4 questions per page)
+1. **CTA** — Full-width dark section, CTA button → `/contact`
+
+Here are the unique details for each:
+
+#### 3a. Public Sector & Infrastructure (`/services/public-sector-infrastructure`)
+
+- **H1:** `Public Sector & Infrastructure Excavation in Pennsylvania`
+- **Subheadline:** `Reliable, compliant, and experienced excavation services for municipal water, wastewater, and public works projects.`
+- **Primary keyword:** `public sector excavation contractor PA`
+- **Capabilities:** Public Water Service Installation & Repair, Wastewater & Sewer Infrastructure, Stormwater Management Systems, Roadway Preparation & Public Utility Trenching
+- **FAQ questions:**
+  - Does M&K act as primary contractor or subcontractor on public works?
+  - What areas in Pennsylvania do you serve for infrastructure projects?
+  - What safety protocols does M&K follow on public works job sites?
+  - How do we request a bid from M&K Contractors?
+
+#### 3b. Commercial Site Development (`/services/commercial-site-development`)
+
+- **H1:** `Commercial Site Preparation & Grading in Pennsylvania`
+- **Subheadline:** `Comprehensive earthwork, grading, and land clearing to get your commercial project started on solid ground.`
+- **Primary keyword:** `commercial site preparation Pennsylvania`
+- **Capabilities:** Site Clearing & Land Grubbing, Bulk Earthwork & Mass Grading, Precision Laser Grading, Foundation & Basement Excavation, Erosion & Sediment Control
+- **FAQ questions:**
+  - How do you determine the cost of commercial site grading?
+  - How long does commercial site preparation typically take?
+  - Do you handle erosion and sediment control?
+
+#### 3c. Utility Excavation (`/services/utility-excavation`)
+
+- **H1:** `Underground Utility Trenching & Excavation in Pennsylvania`
+- **Subheadline:** `Safe, precise, and code-compliant trenching for water, sewer, stormwater, and conduit installations.`
+- **Primary keyword:** `utility trenching contractor PA`
+- **Capabilities:** Water & Sewer Line Trenching, Stormwater Management & Drainage, Electrical & Communication Conduit Trenching, Septic System Excavation & Abandonment
+- **FAQ questions:**
+  - What safety measures does M&K take during utility trenching?
+  - Can you work around existing underground utilities?
+  - What types of pipe materials do you work with?
+
+#### 3d. Demolition Services (`/services/demolition`)
+
+- **H1:** `Commercial & Structural Demolition in Pennsylvania`
+- **Subheadline:** `Safe, efficient teardown and site clearing to prepare your property for its next chapter.`
+- **Primary keyword:** `commercial demolition contractor Pennsylvania`
+- **Capabilities:** Structural Demolition, Concrete Breaking & Removal, Site Clearing & Debris Hauling
+- **FAQ questions:**
+  - Do you handle demolition permits?
+  - Can you separate and recycle demolition materials?
+
+#### 3e. Retaining Walls & Hardscaping (`/services/retaining-walls`)
+
+- **H1:** `Retaining Wall Excavation & Commercial Hardscaping in Pennsylvania`
+- **Subheadline:** `Precision grading and excavation for structural retaining walls and commercial hardscape installations.`
+- **Primary keyword:** `retaining wall contractor PA`
+- **Capabilities:** Retaining Wall Footing Excavation, Drainage Installation, Backfill & Compaction, Commercial Hardscape Grading
+- **FAQ questions:**
+  - Do you build the retaining walls themselves, or just the excavation?
+
+-----
+
+### 8. PROJECTS PAGE (`/projects`)
+
+- **Hero:** H1: `Our Project Gallery`. Subheadline: `Real equipment. Real job sites. Real results across Pennsylvania.`
+- **Intro copy:** “Transparency is a core value at M&K Contractors. You will not find a single stock photo or AI-generated image anywhere on this website. Every photograph below was taken on an actual M&K job site by our team.”
+- **Gallery:** Responsive grid of 12+ image placeholders. Each has:
+  - Descriptive caption (e.g., “Track loader performing bulk earthwork — Bucks County, PA”)
+  - Category tag (Site Development, Utilities, Infrastructure, Demolition)
+- **Filter buttons** at top: All | Site Development | Utilities | Infrastructure | Demolition
+- **CTA:** `Like What You See? Request a Quote →` → `/contact`
+
+-----
+
+### 9. CONTACT PAGE (`/contact`)
+
+- **Hero:** H1: `Request a Project Evaluation`. Subheadline: `Free estimates. Written proposals within one week. No strings attached.`
+- **Intro copy:** “Whether you are a general contractor looking for a reliable excavation subcontractor, a developer preparing a commercial site, or a municipality putting an infrastructure project out to bid, M&K Contractors is ready to get to work.”
+- **2-column layout:** Form (left, 60%), Contact info (right, 40%)
+
+**Contact Info Card:**
+
+- Phone (Primary): (267) 221-6226 (click-to-call)
+- Phone (Secondary): (267) 221-6227 (click-to-call)
+- Email: [placeholder — info@mkcontractorspa.com]
+- Hours: Monday – Friday, 7:00 AM – 5:00 PM
+- Service Area: Eastern & Central Pennsylvania
+
+**Lead Capture Form Fields:**
+
+|Field                         |Type                                                                                         |Required|
+|------------------------------|---------------------------------------------------------------------------------------------|--------|
+|First & Last Name             |text                                                                                         |Yes     |
+|Company Name                  |text                                                                                         |No      |
+|Phone Number                  |tel                                                                                          |Yes     |
+|Email Address                 |email                                                                                        |Yes     |
+|Project Location (City or Zip)|text                                                                                         |Yes     |
+|Project Type                  |dropdown: Public Sector / Site Development / Utilities / Demolition / Retaining Walls / Other|Yes     |
+|Estimated Project Start Date  |date picker                                                                                  |No      |
+|Project Description / Scope   |textarea                                                                                     |Yes     |
+|Submit button                 |`Request Evaluation`                                                                         |—       |
+
+**“How It Works” Section (below form):**
+
+- 3-step horizontal process with icons:
+1. **Submit Your Request** — Fill out the form with your project details.
+1. **Site Evaluation** — We contact you within 3 business days to schedule a visit.
+1. **Written Proposal** — Receive a detailed proposal within one week. Free, no strings attached.
+
+-----
+
+## GLOBAL COMPONENTS
+
+### Footer
+
+- Dark background (`#1C1C1E`), 4-column layout:
+  - **Column 1:** Logo + brief tagline + phone number
+  - **Column 2:** Quick Links (Home, About, Projects, Contact)
+  - **Column 3:** Services (links to all 5 service pages)
+  - **Column 4:** Service Area list (Bucks, Montgomery, Chester, Delaware, Lehigh, Northampton, Berks counties)
+- Bottom bar: `© 2026 M&K Contractors LLC. All rights reserved.` | `Fully Licensed & Insured`
+
+### Breadcrumbs
+
+- Show on all subpages (not home). Example: `Home > Services > Utility Excavation`
+
+-----
+
+## SEO & SCHEMA MARKUP
+
+### Per-Page SEO
+
+Each page must have:
+
+- Unique `<title>` tag with primary keyword (e.g., `Public Sector Excavation Contractor in PA | M&K Contractors`)
+- `<meta name="description">` — 150–160 chars with keyword + CTA language
+- One H1 per page with primary keyword
+- Descriptive `alt` text on all images
+- Clean URL slugs as specified above
+
+### JSON-LD Schema (embed in `<head>` of each page)
+
+Implement the following schema types:
+
+1. **LocalBusiness** (global, all pages):
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "M&K Contractors LLC",
+  "telephone": "(267) 221-6226",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "PA",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Bucks County, PA", "Montgomery County, PA", "Chester County, PA", "Delaware County, PA", "Lehigh County, PA", "Northampton County, PA", "Berks County, PA"],
+  "openingHours": "Mo-Fr 07:00-17:00",
+  "priceRange": "$$",
+  "url": "https://mkcontractorspa.com"
+}
+```
+
+1. **Service** schema on each service subpage
+1. **FAQPage** schema on each service subpage (from the FAQ accordion content)
+1. **AggregateRating** on Home and About pages (`ratingValue: 5, reviewCount: 3`)
+1. **Review** schema on Home page (from the 3 testimonials)
+1. **BreadcrumbList** on all subpages
+1. **WebSite** schema (global) with `SearchAction`
+
+-----
+
+## PERFORMANCE REQUIREMENTS
+
+- All images: use WebP format placeholders, lazy loading
+- Minimal JavaScript — no heavy client-side frameworks beyond what Next.js requires
+- Target Lighthouse score: 90+ on Performance, Accessibility, Best Practices, SEO
+- Click-to-call links on all phone numbers (`tel:+12672216226`)
+- Smooth scroll for any in-page anchor links
+- FAQ accordions: accessible (keyboard navigable, aria attributes)
+
+-----
+
+## IMPORTANT NOTES
+
+- **No stock photos.** All image slots should be clearly labeled placeholder divs (gray background with white text describing what photo goes there, e.g., “Photo: Excavator on municipal job site”)
+- **No AI-generated images.**
+- **No emojis anywhere on the site.**
+- The site must feel **industrial and strong but clean** — not generic, not futuristic.
+- Every page must have at least one CTA leading to `/contact`.
+- Phone numbers must be click-to-call on mobile.
+- The Services dropdown in the nav must work on both desktop (hover) and mobile (tap to expand).
