@@ -17,9 +17,12 @@ export function Footer() {
           
           {/* Column 1: Logo & Tagline */}
           <div>
-            <Link href="/" className="flex flex-col inline-block mb-6">
-              <span className="font-display font-black text-3xl text-foreground tracking-tight leading-none">M&K</span>
-              <span className="font-sans font-bold text-[10px] text-accent tracking-[0.2em] mt-1">CONTRACTORS LLC</span>
+            <Link href="/" className="inline-block mb-6">
+              <img
+                src="/mk-logo.png"
+                alt="M&K Contractors LLC — Hatfield, PA"
+                className="h-20 w-auto object-contain"
+              />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Precision Excavation. Unmatched Reliability. Specialty excavation and site contracting serving Pennsylvania.

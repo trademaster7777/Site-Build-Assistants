@@ -63,9 +63,12 @@ export function Header() {
         <div className="flex justify-between items-center h-20 md:h-24">
           
           {/* Logo */}
-          <Link href="/" className="flex flex-col" data-testid="link-logo">
-            <span className="font-display font-black text-3xl md:text-4xl text-foreground tracking-tight leading-none">M&K</span>
-            <span className="font-sans font-bold text-[10px] md:text-xs text-accent tracking-[0.2em] mt-1">CONTRACTORS LLC</span>
+          <Link href="/" className="flex items-center" data-testid="link-logo">
+            <img
+              src="/mk-logo.png"
+              alt="M&K Contractors LLC — Hatfield, PA"
+              className="h-14 md:h-16 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
