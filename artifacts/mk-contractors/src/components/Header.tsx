@@ -37,9 +37,9 @@ export function Header() {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md shadow-md' : 'bg-background'}`}>
+    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#3a3a3c]/95 backdrop-blur-md shadow-md' : 'bg-[#3a3a3c]'}`}>
       {/* Top Utility Bar */}
-      <div className="bg-[#111] text-muted-foreground text-xs py-2 border-b border-white/5 hidden md:block">
+      <div className="bg-[#333335] text-muted-foreground text-xs py-2 border-b border-white/8 hidden md:block">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center space-x-6">
             <a href="tel:+12672216226" className="flex items-center space-x-2 hover:text-accent transition-colors" data-testid="link-phone-top">
