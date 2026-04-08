@@ -198,3 +198,84 @@
     font-family: var(--font-display);
   }
 }
+
+.gold-gradient {
+  background: linear-gradient(135deg, #FFB800 0%, #FF8C00 50%, #FFB800 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #FFB800 0%, #FFCC44 50%, #FFB800 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.premium-card {
+  background: linear-gradient(145deg, hsl(0 0% 14%) 0%, hsl(0 0% 11%) 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.premium-card-light {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F8F8F8 100%);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #FFB800 0%, #FF6B00 100%);
+}
+
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(28,28,30,0.92) 0%, rgba(28,28,30,0.75) 50%, rgba(28,28,30,0.6) 100%);
+}
+
+.subtle-noise {
+  position: relative;
+}
+.subtle-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+.accent-line-left {
+  position: relative;
+}
+.accent-line-left::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #FFB800, #FF6B00);
+}
+
+.btn-premium {
+  background: linear-gradient(135deg, #FFB800 0%, #E5A600 100%);
+  box-shadow: 0 4px 14px rgba(255, 184, 0, 0.35), 0 1px 3px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+}
+.btn-premium:hover {
+  background: linear-gradient(135deg, #FFCC33 0%, #FFB800 100%);
+  box-shadow: 0 6px 20px rgba(255, 184, 0, 0.45), 0 2px 4px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
+}
+
+.btn-outline-premium {
+  border: 2px solid rgba(255,255,255,0.6);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+.btn-outline-premium:hover {
+  border-color: #FFB800;
+  background: rgba(255,184,0,0.1);
+  color: #FFB800;
+}

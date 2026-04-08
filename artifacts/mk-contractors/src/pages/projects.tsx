@@ -4,6 +4,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
+import { ArrowRight } from "lucide-react";
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
@@ -37,38 +38,38 @@ export default function Projects() {
     <div className="min-h-screen bg-background text-foreground pt-20">
       <Header />
 
-      {/* Hero Section */}
-      <section className="bg-secondary py-20 border-b border-border">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent z-[2]" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Breadcrumb items={[{ label: "Projects" }]} />
-          <h1 className="font-display font-extrabold text-4xl md:text-5xl text-white uppercase max-w-4xl mt-6 mb-4 tracking-tight">
+          <div className="section-divider mt-8 mb-8" />
+          <h1 className="font-display font-black text-4xl md:text-5xl lg:text-[64px] text-white uppercase max-w-4xl mb-6 tracking-tight leading-[1.05]">
             Our Project Gallery
           </h1>
-          <p className="text-xl text-accent font-medium uppercase tracking-widest mb-8">
+          <p className="text-lg text-accent font-semibold uppercase tracking-[0.2em] mb-10">
             Real equipment. Real job sites. Real results across Pennsylvania.
           </p>
-          <div className="bg-background/10 p-6 border-l-4 border-accent max-w-4xl">
-            <p className="text-white/90 text-lg leading-relaxed">
+          <div className="premium-card p-8 max-w-4xl rounded-sm relative">
+            <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-accent-alt rounded-l-sm" />
+            <p className="text-white/60 text-lg leading-[1.8] pl-4">
               Transparency is a core value at M&K Contractors. You will not find a single stock photo or AI-generated image anywhere on this website. Every photograph below was taken on an actual M&K job site by our team.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-20 md:py-28 bg-[#F5F5F5]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Filters */}
-          <div className="flex flex-wrap gap-3 mb-12">
+          <div className="flex flex-wrap gap-3 mb-14">
             {filters.map(f => (
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-5 py-2 font-sans font-bold text-sm uppercase tracking-wider transition-colors border ${
+                className={`px-6 py-2.5 font-sans font-bold text-xs uppercase tracking-[0.15em] transition-all duration-300 rounded-sm ${
                   filter === f 
-                    ? "bg-accent text-background border-accent" 
-                    : "bg-transparent text-foreground border-border hover:border-accent hover:text-accent"
+                    ? "btn-premium text-[#1C1C1E] shadow-lg" 
+                    : "bg-white text-[#1C1C1E] border border-gray-200 hover:border-accent hover:text-accent shadow-sm"
                 }`}
                 data-testid={`filter-btn-${f.replace(/\s+/g, '-').toLowerCase()}`}
               >
@@ -77,21 +78,21 @@ export default function Projects() {
             ))}
           </div>
 
-          {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProjects.map(project => (
-              <div key={project.id} className="group flex flex-col h-full bg-secondary border border-border overflow-hidden">
-                <div className="relative h-60 w-full overflow-hidden bg-[#3A3A3C]">
+              <div key={project.id} className="group flex flex-col h-full overflow-hidden rounded-sm shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-1 bg-white">
+                <div className="relative h-64 w-full overflow-hidden">
                   <ImagePlaceholder 
                     label={`Photo: ${project.caption}`} 
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                   />
-                  <div className="absolute top-3 right-3 bg-background/90 text-accent text-xs font-bold uppercase tracking-wider px-3 py-1 shadow-sm">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e]/60 via-transparent to-transparent" />
+                  <div className="absolute top-4 right-4 bg-[#1C1C1E]/90 text-accent text-[10px] font-bold uppercase tracking-[0.15em] px-3 py-1.5 rounded-sm shadow-md backdrop-blur-sm">
                     {project.category}
                   </div>
                 </div>
-                <div className="p-5 flex-grow bg-background border-t border-border">
-                  <p className="font-sans text-sm font-medium text-foreground leading-snug">
+                <div className="p-5 flex-grow border-t-2 border-accent/20">
+                  <p className="font-sans text-sm font-medium text-[#1C1C1E] leading-snug">
                     {project.caption}
                   </p>
                 </div>
@@ -100,24 +101,26 @@ export default function Projects() {
           </div>
 
           {filteredProjects.length === 0 && (
-            <div className="text-center py-20 text-muted-foreground">
+            <div className="text-center py-20 text-gray-400">
               No projects found for this category.
             </div>
           )}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-[#1C1C1E] border-t-4 border-accent text-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display font-extrabold text-3xl md:text-4xl mb-10 uppercase text-white tracking-tight">
+      <section className="py-28 bg-[#1C1C1E] relative subtle-noise overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent/80 mb-6 block">Get Started</span>
+          <h2 className="font-display font-black text-3xl md:text-4xl mb-12 uppercase text-white tracking-tight">
             Like What You See?
           </h2>
           <Link 
             href="/contact" 
-            className="inline-flex items-center justify-center px-10 py-5 bg-accent text-background font-sans font-bold text-lg uppercase tracking-widest hover:bg-accent-alt transition-colors"
+            className="btn-premium inline-flex items-center justify-center px-12 py-5 text-[#1C1C1E] font-sans font-bold text-lg uppercase tracking-[0.12em] rounded-sm"
           >
-            Request a Quote →
+            Request a Quote
+            <ArrowRight className="ml-3 h-5 w-5" />
           </Link>
         </div>
       </section>

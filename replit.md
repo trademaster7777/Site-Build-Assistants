@@ -25,7 +25,10 @@ pnpm workspace monorepo using TypeScript. Contains the M&K Contractors LLC marke
 - **Pages**: 9 pages — Home, About Us, 5 Service pages, Projects Gallery, Contact
 - **Routing**: wouter
 - **Fonts**: Montserrat (headings) + Inter (body) from Google Fonts
-- **Colors**: Dark industrial (#1C1C1E background, #FFB800 amber accent)
+- **Colors**: Dark industrial (#1C1C1E background, #FFB800 amber accent, #3A3A3C secondary)
+- **Design**: Premium upgrade applied — gold gradients, subtle noise textures, layered shadows, refined typography hierarchy, gradient accent lines, premium card components with inset glow borders
+- **CSS utilities**: `.gold-gradient`, `.gold-text`, `.premium-card`, `.premium-card-light`, `.section-divider`, `.hero-overlay`, `.subtle-noise`, `.btn-premium`, `.btn-outline-premium`
+- **OG/Meta**: Full Open Graph + Twitter card tags in index.html, og-image.jpg in public
 - **No backend required** — static frontend only, contact form uses client-side success state
 
 ## Key Commands

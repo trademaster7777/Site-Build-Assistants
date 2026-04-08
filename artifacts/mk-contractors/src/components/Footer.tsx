@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Phone } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 
 export function Footer() {
   const serviceLinks = [
@@ -11,46 +11,55 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-[#3a3a3c] border-t border-border pt-16 pb-8">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-gradient-to-b from-[#2a2a2e] to-[#1c1c1e] border-t border-white/5 pt-20 pb-8 subtle-noise">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           
-          {/* Column 1: Logo & Tagline */}
           <div>
-            <Link href="/" className="inline-block mb-6">
+            <Link href="/" className="inline-block mb-8">
               <img
                 src="/mk-logo.png"
                 alt="M&K Contractors LLC — Hatfield, PA"
                 className="h-20 w-auto object-contain"
               />
             </Link>
-            <p className="text-muted-foreground mb-6 max-w-sm">
-              Precision Excavation. Unmatched Reliability. Specialty excavation and site contracting serving Pennsylvania.
+            <p className="text-white/40 mb-8 max-w-sm leading-relaxed text-sm">
+              Precision Excavation. Unmatched Reliability. Specialty excavation and site contracting serving Eastern and Central Pennsylvania.
             </p>
-            <a href="tel:+12672216226" className="flex items-center space-x-2 text-accent font-semibold hover:text-accent-alt transition-colors">
-              <Phone className="h-5 w-5" />
-              <span>(267) 221-6226</span>
+            <a href="tel:+12672216226" className="flex items-center space-x-3 group">
+              <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <Phone className="h-4 w-4 text-accent" />
+              </div>
+              <span className="text-white font-semibold text-lg group-hover:text-accent transition-colors">(267) 221-6226</span>
             </a>
           </div>
 
-          {/* Column 2: Quick Links */}
           <div>
-            <h3 className="font-display font-bold text-lg text-foreground mb-6 uppercase tracking-wider">Quick Links</h3>
+            <h3 className="font-display font-bold text-sm text-white/30 mb-8 uppercase tracking-[0.2em]">Quick Links</h3>
             <ul className="space-y-4">
-              <li><Link href="/" className="text-muted-foreground hover:text-accent transition-colors">Home</Link></li>
-              <li><Link href="/about-us" className="text-muted-foreground hover:text-accent transition-colors">About Us</Link></li>
-              <li><Link href="/projects" className="text-muted-foreground hover:text-accent transition-colors">Projects</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-accent transition-colors">Contact Us</Link></li>
+              {[
+                { label: "Home", href: "/" },
+                { label: "About Us", href: "/about-us" },
+                { label: "Projects", href: "/projects" },
+                { label: "Contact Us", href: "/contact" },
+              ].map((link, idx) => (
+                <li key={idx}>
+                  <Link href={link.href} className="text-white/60 hover:text-accent transition-colors duration-300 flex items-center group/link text-sm">
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-300 text-accent" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Column 3: Services */}
           <div>
-            <h3 className="font-display font-bold text-lg text-foreground mb-6 uppercase tracking-wider">Services</h3>
+            <h3 className="font-display font-bold text-sm text-white/30 mb-8 uppercase tracking-[0.2em]">Services</h3>
             <ul className="space-y-4">
               {serviceLinks.map((service, idx) => (
                 <li key={idx}>
-                  <Link href={service.href} className="text-muted-foreground hover:text-accent transition-colors">
+                  <Link href={service.href} className="text-white/60 hover:text-accent transition-colors duration-300 flex items-center group/link text-sm">
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-300 text-accent" />
                     {service.label}
                   </Link>
                 </li>
@@ -58,27 +67,26 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Service Areas */}
           <div>
-            <h3 className="font-display font-bold text-lg text-foreground mb-6 uppercase tracking-wider">Service Areas</h3>
-            <p className="text-muted-foreground mb-4">Proudly serving commercial and public sector clients across:</p>
-            <ul className="grid grid-cols-1 gap-2 text-sm text-muted-foreground">
-              <li>Bucks County</li>
-              <li>Montgomery County</li>
-              <li>Chester County</li>
-              <li>Delaware County</li>
-              <li>Lehigh County</li>
-              <li>Northampton County</li>
-              <li>Berks County</li>
-              <li>Greater Philadelphia Region</li>
+            <h3 className="font-display font-bold text-sm text-white/30 mb-8 uppercase tracking-[0.2em]">Service Areas</h3>
+            <ul className="grid grid-cols-1 gap-3 text-sm text-white/50">
+              {["Bucks County", "Montgomery County", "Chester County", "Delaware County", "Lehigh County", "Northampton County", "Berks County", "Greater Philadelphia"].map((area, idx) => (
+                <li key={idx} className="flex items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent/40 mr-3" />
+                  {area}
+                </li>
+              ))}
             </ul>
           </div>
 
         </div>
 
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30 tracking-wider uppercase">
           <p>© 2026 M&K Contractors LLC. All rights reserved.</p>
-          <p>Fully Licensed & Insured in Pennsylvania</p>
+          <p className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500/80" />
+            Fully Licensed & Insured in Pennsylvania
+          </p>
         </div>
       </div>
     </footer>
