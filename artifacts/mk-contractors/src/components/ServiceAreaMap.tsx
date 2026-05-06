@@ -1,41 +1,126 @@
+import { useMemo } from "react";
+import { geoMercator, geoPath, geoCentroid } from "d3-geo";
+import { feature } from "topojson-client";
+import countiesTopo from "us-atlas/counties-10m.json";
 import { Star } from "lucide-react";
 
-const counties = [
-  { name: "Northampton", x: 712, y: 232 },
-  { name: "Lehigh", x: 660, y: 252 },
-  { name: "Berks", x: 588, y: 308 },
-  { name: "Montgomery", x: 700, y: 302 },
-  { name: "Bucks", x: 768, y: 282 },
-  { name: "Chester", x: 668, y: 360 },
-  { name: "Delaware", x: 740, y: 372 },
-];
+type GeoFeature = {
+  type: "Feature";
+  id?: string | number;
+  geometry: any;
+  properties: { name?: string; [k: string]: unknown };
+};
 
-const HQ = { name: "Hatfield, PA", x: 712, y: 290 };
+const PA_FIPS = "42";
+
+const SERVED_COUNTIES: Record<string, string> = {
+  "42011": "Berks",
+  "42017": "Bucks",
+  "42029": "Chester",
+  "42045": "Delaware",
+  "42077": "Lehigh",
+  "42091": "Montgomery",
+  "42095": "Northampton",
+  "42101": "Philadelphia",
+};
+
+const HQ = { name: "Hatfield, PA", lon: -75.2974, lat: 40.2807 };
+
+const WIDTH = 900;
+const HEIGHT = 540;
 
 export function ServiceAreaMap() {
+  const { paCounties, projection } = useMemo(() => {
+    const topo = countiesTopo as any;
+    const allCounties = feature(topo, topo.objects.counties) as any;
+
+    const paCounties = (allCounties.features as GeoFeature[]).filter(
+      (f) => String(f.id).startsWith(PA_FIPS),
+    );
+
+    const paState: any = {
+      type: "Feature",
+      geometry: {
+        type: "GeometryCollection",
+        geometries: paCounties.map((c) => c.geometry),
+      },
+      properties: { name: "Pennsylvania" },
+    };
+
+    const proj = geoMercator().fitExtent(
+      [
+        [40, 30],
+        [WIDTH - 40, HEIGHT - 30],
+      ],
+      paState,
+    );
+
+    return { paCounties, projection: proj };
+  }, []);
+
+  const path = useMemo(() => geoPath(projection), [projection]);
+
+  const hqPoint = projection([HQ.lon, HQ.lat]);
+
+  const labelPositions = useMemo(() => {
+    return Object.keys(SERVED_COUNTIES)
+      .map((fips) => {
+        const f = paCounties.find((c: GeoFeature) => String(c.id) === fips);
+        if (!f) return null;
+        const centroid = geoCentroid(f as any);
+        const projected = projection(centroid);
+        if (!projected) return null;
+        return {
+          fips,
+          name: SERVED_COUNTIES[fips],
+          x: projected[0],
+          y: projected[1],
+        };
+      })
+      .filter(Boolean) as Array<{ fips: string; name: string; x: number; y: number }>;
+  }, [paCounties, projection]);
+
+  const labelOffsets: Record<string, { dx: number; dy: number; anchor: "start" | "end" | "middle" }> = {
+    "42011": { dx: -10, dy: 0, anchor: "end" },
+    "42017": { dx: 18, dy: 22, anchor: "start" },
+    "42029": { dx: -10, dy: 14, anchor: "end" },
+    "42045": { dx: 8, dy: 18, anchor: "start" },
+    "42077": { dx: -10, dy: -4, anchor: "end" },
+    "42091": { dx: -12, dy: 14, anchor: "end" },
+    "42095": { dx: 12, dy: -8, anchor: "start" },
+    "42101": { dx: 18, dy: 12, anchor: "start" },
+  };
+
   return (
     <div className="relative w-full h-full bg-gradient-to-br from-[#1C1C1E] via-[#212124] to-[#1C1C1E] overflow-hidden subtle-noise">
-      <div className="absolute inset-0 opacity-[0.07]" style={{
-        backgroundImage: 'radial-gradient(circle at 75% 45%, rgba(255,184,0,0.4) 0%, transparent 45%)'
-      }} />
+      <div
+        className="absolute inset-0 opacity-[0.08]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 78% 60%, rgba(255,184,0,0.5) 0%, transparent 45%)",
+        }}
+      />
 
       <svg
-        viewBox="0 0 900 540"
+        viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
         className="absolute inset-0 w-full h-full"
         preserveAspectRatio="xMidYMid meet"
         aria-label="M&K Contractors Pennsylvania service area map"
       >
         <defs>
-          <linearGradient id="serviceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#FFB800" stopOpacity="0.85" />
-            <stop offset="100%" stopColor="#FF9500" stopOpacity="0.75" />
+          <linearGradient id="srvGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#FFB800" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="#FF9500" stopOpacity="0.85" />
           </linearGradient>
-          <radialGradient id="serviceGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#FFB800" stopOpacity="0.35" />
-            <stop offset="100%" stopColor="#FFB800" stopOpacity="0" />
-          </radialGradient>
           <filter id="pinGlow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <filter id="hqGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
@@ -43,93 +128,122 @@ export function ServiceAreaMap() {
           </filter>
         </defs>
 
-        <ellipse cx="700" cy="310" rx="180" ry="140" fill="url(#serviceGlow)" />
+        {paCounties.map((county: GeoFeature) => {
+          const fips = String(county.id);
+          const isServed = fips in SERVED_COUNTIES;
+          const d = path(county as any);
+          if (!d) return null;
+          return (
+            <path
+              key={fips}
+              d={d}
+              fill={isServed ? "url(#srvGrad)" : "#26262a"}
+              stroke={isServed ? "#FFB800" : "#3a3a3c"}
+              strokeWidth={isServed ? 0.9 : 0.5}
+              strokeLinejoin="round"
+            />
+          );
+        })}
 
         <path
-          d="M 130 180 L 215 175 L 240 165 L 245 155 L 260 152 L 265 168 L 285 172 L 360 175 L 460 175 L 540 178 L 620 180 L 700 185 L 770 195 L 805 220 L 808 245 L 798 270 L 780 285 L 770 305 L 762 330 L 745 355 L 730 380 L 705 400 L 680 410 L 650 400 L 620 390 L 580 395 L 540 405 L 500 410 L 460 408 L 420 405 L 380 400 L 340 395 L 300 390 L 260 388 L 220 386 L 180 380 L 150 370 L 130 350 L 122 320 L 120 290 L 122 260 L 125 220 Z"
-          fill="#26262a"
-          stroke="#3a3a3c"
-          strokeWidth="1.5"
-        />
-
-        <path
-          d="M 580 180 L 620 180 L 700 185 L 770 195 L 805 220 L 808 245 L 798 270 L 780 285 L 770 305 L 762 330 L 745 355 L 730 380 L 705 400 L 680 410 L 650 400 L 620 390 L 595 380 L 580 360 L 575 330 L 580 300 L 585 270 L 588 240 L 585 210 Z"
-          fill="url(#serviceGrad)"
+          d={path({
+            type: "FeatureCollection",
+            features: paCounties,
+          } as any) || ""}
+          fill="none"
           stroke="#FFB800"
-          strokeWidth="1.5"
+          strokeWidth={1.5}
+          strokeOpacity={0.7}
+          strokeLinejoin="round"
         />
 
-        <g stroke="#FFB800" strokeWidth="0.8" opacity="0.4" fill="none">
-          <path d="M 580 220 L 770 230" />
-          <path d="M 585 270 L 760 280" />
-          <path d="M 580 320 L 750 330" />
-          <path d="M 595 370 L 730 380" />
-          <path d="M 640 185 L 645 405" />
-          <path d="M 700 188 L 700 410" />
-          <path d="M 750 195 L 745 405" />
-        </g>
-
-        {counties.map((c) => (
-          <g key={c.name} filter="url(#pinGlow)">
-            <circle cx={c.x} cy={c.y} r="6" fill="#1C1C1E" stroke="#FFB800" strokeWidth="2" />
-            <circle cx={c.x} cy={c.y} r="2.5" fill="#FFB800" />
+        {labelPositions.map(({ fips, x, y }) => (
+          <g key={`pin-${fips}`} filter="url(#pinGlow)">
+            <circle cx={x} cy={y} r="4.5" fill="#1C1C1E" stroke="#FFB800" strokeWidth="1.8" />
+            <circle cx={x} cy={y} r="1.8" fill="#FFB800" />
           </g>
         ))}
 
-        <g filter="url(#pinGlow)">
-          <circle cx={HQ.x} cy={HQ.y} r="14" fill="#1C1C1E" stroke="#FFB800" strokeWidth="2.5" />
-          <path
-            d="M 712 280 L 715 287 L 723 287 L 716 292 L 719 300 L 712 295 L 705 300 L 708 292 L 701 287 L 709 287 Z"
-            fill="#FFB800"
-          />
-        </g>
+        {hqPoint && (
+          <g filter="url(#hqGlow)">
+            <circle cx={hqPoint[0]} cy={hqPoint[1]} r="12" fill="#1C1C1E" stroke="#FFB800" strokeWidth="2.5" />
+            <path
+              transform={`translate(${hqPoint[0]} ${hqPoint[1]})`}
+              d="M 0 -7 L 2.1 -2.2 L 7.3 -2.2 L 3.1 1.0 L 4.7 6 L 0 3 L -4.7 6 L -3.1 1.0 L -7.3 -2.2 L -2.1 -2.2 Z"
+              fill="#FFB800"
+            />
+          </g>
+        )}
+
+        {labelPositions.map(({ fips, name, x, y }) => {
+          const offset = labelOffsets[fips] ?? { dx: 0, dy: -10, anchor: "middle" };
+          return (
+            <g key={`label-${fips}`}>
+              <text
+                x={x + offset.dx}
+                y={y + offset.dy}
+                textAnchor={offset.anchor}
+                dominantBaseline="middle"
+                fontSize="11"
+                fontWeight="700"
+                fontFamily="Montserrat, sans-serif"
+                fill="#FFFFFF"
+                stroke="#1C1C1E"
+                strokeWidth="3.5"
+                strokeLinejoin="round"
+                paintOrder="stroke fill"
+                style={{ letterSpacing: "0.04em", textTransform: "uppercase" }}
+              >
+                {name}
+              </text>
+            </g>
+          );
+        })}
+
+        {hqPoint && (
+          <g>
+            <rect
+              x={hqPoint[0] - 60}
+              y={hqPoint[1] - 38}
+              width="120"
+              height="22"
+              rx="2"
+              fill="#FFB800"
+              filter="url(#pinGlow)"
+            />
+            <text
+              x={hqPoint[0]}
+              y={hqPoint[1] - 26}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize="10"
+              fontWeight="800"
+              fontFamily="Montserrat, sans-serif"
+              fill="#1C1C1E"
+              style={{ letterSpacing: "0.1em", textTransform: "uppercase" }}
+            >
+              HATFIELD HQ
+            </text>
+            <path
+              d={`M ${hqPoint[0] - 5} ${hqPoint[1] - 16} L ${hqPoint[0] + 5} ${hqPoint[1] - 16} L ${hqPoint[0]} ${hqPoint[1] - 11} Z`}
+              fill="#FFB800"
+            />
+          </g>
+        )}
       </svg>
 
-      <div className="absolute inset-0 pointer-events-none">
-        {counties.map((c) => (
-          <div
-            key={c.name}
-            className="absolute font-sans text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.15em] text-white/85 whitespace-nowrap"
-            style={{
-              left: `${(c.x / 900) * 100}%`,
-              top: `${(c.y / 540) * 100}%`,
-              transform: c.name === "Bucks" || c.name === "Delaware"
-                ? "translate(14px, -50%)"
-                : c.name === "Berks"
-                ? "translate(-100%, -50%) translateX(-12px)"
-                : c.name === "Lehigh"
-                ? "translate(-100%, -50%) translateX(-12px)"
-                : "translate(-50%, -28px)",
-            }}
-          >
-            <span className="bg-black/70 backdrop-blur-sm px-2 py-0.5 rounded-sm border border-accent/25">
-              {c.name}
-            </span>
-          </div>
-        ))}
-        <div
-          className="absolute"
-          style={{
-            left: `${(HQ.x / 900) * 100}%`,
-            top: `${(HQ.y / 540) * 100}%`,
-            transform: "translate(20px, -50%)",
-          }}
-        >
-          <div className="bg-accent text-[#1C1C1E] px-3 py-1.5 rounded-sm shadow-[0_4px_20px_rgba(255,184,0,0.4)] flex items-center gap-1.5">
-            <Star className="w-3 h-3 fill-current" />
-            <span className="font-sans text-[10px] md:text-[11px] font-bold uppercase tracking-[0.12em] whitespace-nowrap">
-              Hatfield, PA — HQ
-            </span>
-          </div>
+      <div className="absolute bottom-4 left-5 flex flex-col gap-2 text-[10px] uppercase tracking-[0.2em] text-white/50 font-semibold">
+        <div className="flex items-center gap-2">
+          <span className="w-3 h-3 rounded-sm bg-accent" />
+          <span>Service Area</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Star className="w-3 h-3 text-accent fill-current" />
+          <span>Headquarters</span>
         </div>
       </div>
-
-      <div className="absolute bottom-4 left-4 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-white/40 font-semibold">
-        <span className="w-3 h-3 bg-accent rounded-sm" />
-        Active Service Area
-      </div>
-      <div className="absolute top-4 right-4 text-[10px] uppercase tracking-[0.2em] text-white/30 font-semibold">
-        Pennsylvania, USA
+      <div className="absolute top-4 right-5 text-[10px] uppercase tracking-[0.25em] text-white/40 font-semibold">
+        Commonwealth of Pennsylvania
       </div>
     </div>
   );
