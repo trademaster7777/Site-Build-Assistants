@@ -11,6 +11,7 @@ export default function RetainingWalls() {
       title="Retaining Wall Excavation & Commercial Hardscaping in Pennsylvania"
       subheadline="Precision grading and excavation for structural retaining walls and commercial hardscape installations."
       serviceName="Retaining Walls & Hardscaping"
+      heroPhotoNumber={25}
       overview={[
         "Structural retaining walls and large-scale commercial hardscapes require exacting earthwork to ensure long-term stability. A retaining wall is only as strong as the subgrade it sits on and the drainage system behind it. M&K Contractors specializes in the precision excavation, footing preparation, and drainage installation required for engineered retaining walls across Pennsylvania.",
         "We work closely with hardscape contractors, civil engineers, and developers to prepare sites for segmental block walls, poured concrete walls, and boulder retaining structures. By handling the heavy lifting—from cutting into hillsides and trenching massive footings to importing and compacting thousands of tons of clean stone backfill—we allow hardscape teams to focus purely on structural assembly."

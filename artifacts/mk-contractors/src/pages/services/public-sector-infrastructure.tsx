@@ -11,6 +11,7 @@ export default function PublicSector() {
       title="Public Sector & Municipal Infrastructure in Pennsylvania"
       subheadline="Bid-ready, prevailing-wage-compliant excavation for townships, boroughs, authorities, and government public works programs."
       serviceName="Public Sector & Infrastructure"
+      heroPhotoNumber={21}
       overview={[
         "M&K Contractors works directly with Pennsylvania municipalities, water and sewer authorities, school districts, and government agencies on publicly bid infrastructure projects. Public sector work is governed by a different rulebook than private commercial work — it requires familiarity with prevailing wage requirements, certified payroll, public bid documentation, MPT (maintenance and protection of traffic) plans, inspector coordination, and strict municipal acceptance standards.",
         "Where our Utility Excavation service focuses on the trenching itself, our Public Sector practice is built around the broader project: managing community impact, working through municipal review and inspection, coordinating with engineers of record, and delivering finished infrastructure that the township or authority can sign off on and own for the next several decades. We bid as a primary contractor on smaller municipal packages and serve as the dedicated excavation partner for general contractors awarded larger public infrastructure work."

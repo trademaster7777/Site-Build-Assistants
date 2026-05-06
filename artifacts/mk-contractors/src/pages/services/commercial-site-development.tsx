@@ -11,6 +11,7 @@ export default function CommercialSite() {
       title="Commercial Site Preparation & Grading in Pennsylvania"
       subheadline="Comprehensive earthwork, grading, and land clearing to get your commercial project started on solid ground."
       serviceName="Commercial Site Development"
+      heroPhotoNumber={22}
       overview={[
         "The success of any commercial construction project begins long before the foundation is poured. M&K Contractors provides comprehensive commercial site preparation and grading services across Eastern and Central Pennsylvania. We understand that general contractors and developers operate on tight schedules where delays in earthwork cascade through the entire project timeline. That is why when we commit to a site development schedule, we mobilize our own specialized equipment and crew to meet it.",
         "From initial land clearing and grubbing to mass grading and precision laser leveling, we handle the complete site package. We do not subcontract out portions of the site prep — our team controls the process from the first cut to final subgrade approval, ensuring the site is perfectly prepared for the concrete and structural teams that follow."

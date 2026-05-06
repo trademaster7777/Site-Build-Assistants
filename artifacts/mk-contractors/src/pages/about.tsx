@@ -21,7 +21,7 @@ export default function About() {
 
       <section className="relative bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] py-28 md:py-36 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <ImagePlaceholder label="Photo: About M&K Contractors hero background" className="w-full h-full object-cover opacity-20" />
+          <ImagePlaceholder number={15} label="About page hero background" className="w-full h-full object-cover opacity-20" />
         </div>
         <div className="absolute inset-0 hero-overlay z-[1]" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent z-[2]" />
@@ -55,7 +55,7 @@ export default function About() {
             </div>
             <div className="relative">
               <div className="relative h-[520px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)] rounded-sm">
-                <ImagePlaceholder label="Photo: Completed M&K project — finished commercial site, Pennsylvania" className="absolute inset-0 w-full h-full object-cover" />
+                <ImagePlaceholder number={16} label="Our Story photo — Completed commercial site in Pennsylvania" className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-5 -left-5 w-28 h-28 gold-gradient z-[-1] hidden md:block" />
               <div className="absolute -top-4 -right-4 w-16 h-16 border-2 border-accent/30 z-[-1] hidden md:block" />
@@ -113,7 +113,7 @@ export default function About() {
             ].map((item, idx) => (
               <div key={idx} className="group">
                 <div className="relative h-52 mb-5 overflow-hidden rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.1)]">
-                  <ImagePlaceholder label={item.imgLabel} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <ImagePlaceholder number={17 + idx} label={item.imgLabel} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e]/50 via-transparent to-transparent" />
                 </div>
                 <h3 className="font-display font-bold text-base uppercase mb-2 tracking-wide">{item.title}</h3>

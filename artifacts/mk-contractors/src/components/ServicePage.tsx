@@ -23,18 +23,20 @@ export interface ServicePageProps {
   capabilities: Capability[];
   faqs: FAQ[];
   serviceName: string;
+  heroPhotoNumber?: number;
 }
 
-export function ServicePage({ title, subheadline, overview, capabilities, faqs, serviceName }: ServicePageProps) {
+export function ServicePage({ title, subheadline, overview, capabilities, faqs, serviceName, heroPhotoNumber }: ServicePageProps) {
   return (
     <div className="min-h-screen bg-background text-foreground pt-20">
       <Header />
 
       <section className="relative bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] py-28 md:py-36 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <ImagePlaceholder 
-            label={`Photo: Hero image for ${title}`} 
-            className="w-full h-full object-cover opacity-20" 
+          <ImagePlaceholder
+            number={heroPhotoNumber}
+            label={`Hero image for ${title}`}
+            className="w-full h-full object-cover opacity-20"
           />
         </div>
         <div className="absolute inset-0 hero-overlay z-[1]" />

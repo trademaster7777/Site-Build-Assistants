@@ -82,9 +82,10 @@ export default function Projects() {
             {filteredProjects.map(project => (
               <div key={project.id} className="group flex flex-col h-full overflow-hidden rounded-sm shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-1 bg-white">
                 <div className="relative h-64 w-full overflow-hidden">
-                  <ImagePlaceholder 
-                    label={`Photo: ${project.caption}`} 
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                  <ImagePlaceholder
+                    number={25 + project.id}
+                    label={project.caption}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e]/60 via-transparent to-transparent" />
                   <div className="absolute top-4 right-4 bg-[#1C1C1E]/90 text-accent text-[10px] font-bold uppercase tracking-[0.15em] px-3 py-1.5 rounded-sm shadow-md backdrop-blur-sm">

@@ -11,6 +11,7 @@ export default function Demolition() {
       title="Commercial & Structural Demolition in Pennsylvania"
       subheadline="Safe, efficient teardown and site clearing to prepare your property for its next chapter."
       serviceName="Demolition Services"
+      heroPhotoNumber={24}
       overview={[
         "Before new construction can begin, old structures must be safely and efficiently removed. M&K Contractors provides controlled commercial and structural demolition services throughout Eastern and Central Pennsylvania. Demolition is not simply destruction; it requires strategic planning to safely dismantle structures without damaging surrounding properties, utilities, or the underlying subgrade.",
         "We utilize our own heavy equipment outfitted with specialized demolition attachments to tear down commercial buildings, break up heavy concrete foundations, and clear vast expanses of asphalt. Following the teardown, our team handles the complete sorting, loading, and hauling of debris, leaving you with a clean, graded site ready for immediate redevelopment."

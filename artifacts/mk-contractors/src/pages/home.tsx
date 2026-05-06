@@ -24,7 +24,7 @@ export default function Home() {
 
       <section className="relative bg-[#1C1C1E] min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <ImagePlaceholder label="Photo: Excavator on municipal job site — Bucks County, PA" className="w-full h-full object-cover opacity-30" />
+          <ImagePlaceholder number={1} label="Hero background — Excavator on municipal job site (Bucks County, PA)" className="w-full h-full object-cover opacity-30" />
         </div>
         <div className="absolute inset-0 hero-overlay z-[1]" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent z-[2]" />
@@ -107,7 +107,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="relative h-[450px] md:h-[550px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
-                <ImagePlaceholder label="Photo: Completed M&K project — finished site work, Pennsylvania" className="absolute inset-0 w-full h-full object-cover" />
+                <ImagePlaceholder number={2} label="Featured project — Completed M&K site work in Pennsylvania" className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 gold-gradient z-[-1] hidden md:block" />
               <div className="absolute -top-4 -right-4 w-20 h-20 border-2 border-accent/30 z-[-1] hidden md:block" />
@@ -168,7 +168,7 @@ export default function Home() {
             ].map((service, idx) => (
               <div key={idx} className="premium-card group hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col rounded-sm">
                 <div className="h-52 relative overflow-hidden">
-                  <ImagePlaceholder label={service.imgLabel} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <ImagePlaceholder number={3 + idx} label={service.imgLabel} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e] via-transparent to-transparent opacity-60" />
                   <div className="absolute top-5 left-5 w-11 h-11 bg-accent/90 flex items-center justify-center rounded-sm shadow-lg">
                     <service.icon className="w-5 h-5 text-[#1C1C1E]" />
@@ -224,7 +224,7 @@ export default function Home() {
             ].map((caption, idx) => (
               <div key={idx} className="group cursor-pointer">
                 <div className="relative h-72 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-sm">
-                  <ImagePlaceholder label={`Photo: ${caption}`} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <ImagePlaceholder number={8 + idx} label={caption} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1E]/80 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <p className="font-sans font-medium text-sm text-white/90 leading-snug">{caption}</p>
@@ -306,7 +306,7 @@ export default function Home() {
 
       <section className="py-32 bg-[#1C1C1E] relative overflow-hidden subtle-noise">
         <div className="absolute inset-0 z-0">
-          <ImagePlaceholder label="Photo: M&K equipment on active site at sunset" className="w-full h-full object-cover opacity-15" />
+          <ImagePlaceholder number={14} label="Bottom CTA background — M&K equipment on active site at sunset" className="w-full h-full object-cover opacity-15" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1E] via-[#1C1C1E]/80 to-[#1C1C1E]/60 z-[1]" />
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent z-[2]" />
