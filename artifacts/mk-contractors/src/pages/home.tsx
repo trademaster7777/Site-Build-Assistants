@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { ServiceAreaMap } from "@/components/ServiceAreaMap";
 import { Link } from "wouter";
 import { Building2, Layers, Wrench, HardHat, Fence, Users, Shield, FileText, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
@@ -283,8 +284,8 @@ export default function Home() {
       <section className="py-24 bg-[#F5F5F5] text-[#1C1C1E]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 h-[420px] relative overflow-hidden rounded-sm shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
-              <ImagePlaceholder label="Photo: Pennsylvania Service Area Map overlay" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="order-2 lg:order-1 h-[420px] md:h-[480px] relative overflow-hidden rounded-sm shadow-[0_20px_60px_rgba(0,0,0,0.18)] border border-white/5">
+              <ServiceAreaMap />
             </div>
             <div className="order-1 lg:order-2">
               <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent mb-4 block">Coverage Area</span>

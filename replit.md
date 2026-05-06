@@ -32,6 +32,7 @@ pnpm workspace monorepo using TypeScript. Contains the M&K Contractors LLC marke
 - **Contact info (canonical)**: Phone (267) 221-6226 · Email Info@mkcontractorspa.com · Address 1043 Koffel Rd, Hatfield, PA 19440 — keep these consistent across Header, Footer, contact page, and Schema.tsx
 - **Header**: White background (changed from dark) so the dark M&K logo with "Hatfield, PA" text is fully readable. Top utility bar shows phone/email/hours/address; main row has nav + Call Us block + Request a Quote CTA
 - **Routing**: `ScrollToTop` component (in `src/components/ScrollToTop.tsx`, mounted in App.tsx) resets scroll on every wouter location change — required because wouter does not auto-scroll on navigation
+- **Service area map**: `ServiceAreaMap` component (in `src/components/ServiceAreaMap.tsx`) — pure SVG + HTML overlay map of Pennsylvania highlighting the 7 served counties (Bucks, Montgomery, Chester, Delaware, Lehigh, Northampton, Berks) with a star pin on the Hatfield HQ. No image asset — fully vector for sharp rendering
 - **No backend required** — static frontend only, contact form uses client-side success state
 
 ## Key Commands
