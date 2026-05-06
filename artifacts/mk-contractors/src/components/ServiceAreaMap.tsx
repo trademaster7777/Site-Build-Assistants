@@ -50,7 +50,7 @@ export function ServiceAreaMap() {
     const proj = geoMercator().fitExtent(
       [
         [40, 30],
-        [WIDTH - 40, HEIGHT - 30],
+        [WIDTH - 130, HEIGHT - 50],
       ],
       paState,
     );
