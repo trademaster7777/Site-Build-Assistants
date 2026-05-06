@@ -26,7 +26,7 @@ export default function Demolition() {
         },
         {
           title: "Site Clearing & Debris Hauling",
-          description: "Thorough removal of all demolition rubble, scrap metal, and structural debris using our fleet of articulated dump trucks."
+          description: "Thorough removal of all demolition rubble, scrap metal, and structural debris using our fleet of dump trucks."
         }
       ]}
       faqs={[

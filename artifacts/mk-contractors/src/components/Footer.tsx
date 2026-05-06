@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 
 export function Footer() {
   const serviceLinks = [
@@ -16,22 +16,36 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           
           <div>
-            <Link href="/" className="inline-block mb-8">
+            <Link href="/" className="inline-block mb-8 bg-white p-3 rounded-sm">
               <img
                 src="/mk-logo.png"
                 alt="M&K Contractors LLC — Hatfield, PA"
-                className="h-20 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
             </Link>
             <p className="text-white/40 mb-8 max-w-sm leading-relaxed text-sm">
               Precision Excavation. Unmatched Reliability. Specialty excavation and site contracting serving Eastern and Central Pennsylvania.
             </p>
-            <a href="tel:+12672216226" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                <Phone className="h-4 w-4 text-accent" />
+            <div className="space-y-4">
+              <a href="tel:+12672216226" className="flex items-center space-x-3 group" data-testid="link-footer-phone">
+                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors flex-shrink-0">
+                  <Phone className="h-4 w-4 text-accent" />
+                </div>
+                <span className="text-white font-semibold text-base group-hover:text-accent transition-colors">(267) 221-6226</span>
+              </a>
+              <a href="mailto:Info@mkcontractorspa.com" className="flex items-center space-x-3 group" data-testid="link-footer-email">
+                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors flex-shrink-0">
+                  <Mail className="h-4 w-4 text-accent" />
+                </div>
+                <span className="text-white font-medium text-sm group-hover:text-accent transition-colors break-all">Info@mkcontractorspa.com</span>
+              </a>
+              <div className="flex items-start space-x-3">
+                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-4 w-4 text-accent" />
+                </div>
+                <span className="text-white/70 text-sm leading-relaxed pt-2">1043 Koffel Rd<br />Hatfield, PA 19440</span>
               </div>
-              <span className="text-white font-semibold text-lg group-hover:text-accent transition-colors">(267) 221-6226</span>
-            </a>
+            </div>
           </div>
 
           <div>
@@ -44,13 +58,19 @@ export function Footer() {
                 { label: "Contact Us", href: "/contact" },
               ].map((link, idx) => (
                 <li key={idx}>
-                  <Link href={link.href} className="text-white/60 hover:text-accent transition-colors duration-300 flex items-center group/link text-sm">
+                  <Link href={link.href} className="text-white/60 hover:text-accent transition-colors duration-300 flex items-center group/link text-sm" data-testid={`link-footer-quick-${idx}`}>
                     <ArrowRight className="h-3 w-3 mr-2 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-300 text-accent" />
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
+            <div className="mt-10 pt-6 border-t border-white/5">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-white/30 mb-2 font-semibold">Get In Touch</p>
+              <a href="mailto:Info@mkcontractorspa.com" className="text-accent text-sm font-medium hover:text-white transition-colors break-all" data-testid="link-footer-email-quick">
+                Info@mkcontractorspa.com
+              </a>
+            </div>
           </div>
 
           <div>
@@ -58,7 +78,7 @@ export function Footer() {
             <ul className="space-y-4">
               {serviceLinks.map((service, idx) => (
                 <li key={idx}>
-                  <Link href={service.href} className="text-white/60 hover:text-accent transition-colors duration-300 flex items-center group/link text-sm">
+                  <Link href={service.href} className="text-white/60 hover:text-accent transition-colors duration-300 flex items-center group/link text-sm" data-testid={`link-footer-service-${idx}`}>
                     <ArrowRight className="h-3 w-3 mr-2 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-300 text-accent" />
                     {service.label}
                   </Link>

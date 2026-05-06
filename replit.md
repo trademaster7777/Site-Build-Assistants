@@ -29,6 +29,9 @@ pnpm workspace monorepo using TypeScript. Contains the M&K Contractors LLC marke
 - **Design**: Premium upgrade applied — gold gradients, subtle noise textures, layered shadows, refined typography hierarchy, gradient accent lines, premium card components with inset glow borders
 - **CSS utilities**: `.gold-gradient`, `.gold-text`, `.premium-card`, `.premium-card-light`, `.section-divider`, `.hero-overlay`, `.subtle-noise`, `.btn-premium`, `.btn-outline-premium`
 - **OG/Meta**: Full Open Graph + Twitter card tags in index.html, og-image.jpg in public
+- **Contact info (canonical)**: Phone (267) 221-6226 · Email Info@mkcontractorspa.com · Address 1043 Koffel Rd, Hatfield, PA 19440 — keep these consistent across Header, Footer, contact page, and Schema.tsx
+- **Header**: White background (changed from dark) so the dark M&K logo with "Hatfield, PA" text is fully readable. Top utility bar shows phone/email/hours/address; main row has nav + Call Us block + Request a Quote CTA
+- **Routing**: `ScrollToTop` component (in `src/components/ScrollToTop.tsx`, mounted in App.tsx) resets scroll on every wouter location change — required because wouter does not auto-scroll on navigation
 - **No backend required** — static frontend only, contact form uses client-side success state
 
 ## Key Commands

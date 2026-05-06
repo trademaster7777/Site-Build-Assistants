@@ -15,6 +15,7 @@ import Demolition from "@/pages/services/demolition";
 import RetainingWalls from "@/pages/services/retaining-walls";
 
 import { LocalBusinessSchema } from "@/components/Schema";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ function App() {
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL?.replace(/\/$/, "") || ""}>
           <div className="dark">
+            <ScrollToTop />
             <LocalBusinessSchema />
             <Router />
             <Toaster />

@@ -22,7 +22,7 @@ export default function CommercialSite() {
         },
         {
           title: "Bulk Earthwork & Mass Grading",
-          description: "Large-scale cut and fill operations using articulated dump trucks and track loaders to achieve target site elevations."
+          description: "Large-scale cut and fill operations using dump trucks and track loaders to achieve target site elevations."
         },
         {
           title: "Precision Laser Grading",

@@ -55,7 +55,7 @@ export default function About() {
             </div>
             <div className="relative">
               <div className="relative h-[520px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)] rounded-sm">
-                <ImagePlaceholder label="Photo: Mike and Sam on a job site" className="absolute inset-0 w-full h-full object-cover" />
+                <ImagePlaceholder label="Photo: Completed M&K project — finished commercial site, Pennsylvania" className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-5 -left-5 w-28 h-28 gold-gradient z-[-1] hidden md:block" />
               <div className="absolute -top-4 -right-4 w-16 h-16 border-2 border-accent/30 z-[-1] hidden md:block" />
@@ -100,7 +100,7 @@ export default function About() {
             <h2 className="font-display font-black text-3xl md:text-4xl mb-6 uppercase tracking-tight">What We Bring to the Job Site</h2>
             <div className="section-divider mb-10" />
             <p className="text-lg text-gray-600 leading-[1.8]">
-              Our equipment fleet is maintained to the highest standards and purpose-built for the scope of work we take on. From precision mini excavators for tight utility trenching to articulated dump trucks for bulk earthmoving, every piece of equipment we own serves a specific function on Pennsylvania job sites.
+              Our equipment fleet is maintained to the highest standards and purpose-built for the scope of work we take on. From precision mini excavators for tight utility trenching to dump trucks for bulk earthmoving, every piece of equipment we own serves a specific function on Pennsylvania job sites.
             </p>
           </div>
 
@@ -109,7 +109,7 @@ export default function About() {
               { title: "Track Skid Steers (e.g., Kubota SVL97)", desc: "Site grading, backfill, material handling", imgLabel: "Photo: Track Skid Steer on site" },
               { title: "Mini Excavators (e.g., Komatsu PC55)", desc: "Precision trenching, utility excavation", imgLabel: "Photo: Mini Excavator trenching" },
               { title: "Compactors (e.g., Bomag Trench Roller)", desc: "Soil and trench compaction", imgLabel: "Photo: Trench compactor" },
-              { title: "Articulated Dump Trucks", desc: "Bulk material hauling and earthmoving", imgLabel: "Photo: Articulated Dump Truck hauling fill" }
+              { title: "Dump Trucks", desc: "Bulk material hauling and earthmoving", imgLabel: "Photo: Dump truck hauling fill" }
             ].map((item, idx) => (
               <div key={idx} className="group">
                 <div className="relative h-52 mb-5 overflow-hidden rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.1)]">

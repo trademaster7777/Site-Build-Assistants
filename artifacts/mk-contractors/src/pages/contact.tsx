@@ -254,9 +254,8 @@ export default function Contact() {
                       <Phone className="w-4 h-4 text-accent" />
                     </div>
                     <div>
-                      <p className="font-sans font-semibold uppercase text-[10px] tracking-[0.2em] text-white/30 mb-2">Primary Phone</p>
-                      <a href="tel:+12672216226" className="text-xl font-semibold hover:text-accent transition-colors duration-300 block mb-1 text-white">(267) 221-6226</a>
-                      <a href="tel:+12672216227" className="text-lg font-medium hover:text-accent transition-colors duration-300 text-white/60">(267) 221-6227</a>
+                      <p className="font-sans font-semibold uppercase text-[10px] tracking-[0.2em] text-white/30 mb-2">Phone</p>
+                      <a href="tel:+12672216226" className="text-xl font-semibold hover:text-accent transition-colors duration-300 block text-white">(267) 221-6226</a>
                     </div>
                   </div>
 
@@ -266,7 +265,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-sans font-semibold uppercase text-[10px] tracking-[0.2em] text-white/30 mb-2">Email</p>
-                      <a href="mailto:info@mkcontractorspa.com" className="text-lg font-medium hover:text-accent transition-colors duration-300 text-white">info@mkcontractorspa.com</a>
+                      <a href="mailto:Info@mkcontractorspa.com" className="text-lg font-medium hover:text-accent transition-colors duration-300 text-white break-all">Info@mkcontractorspa.com</a>
                     </div>
                   </div>
 
@@ -286,8 +285,10 @@ export default function Contact() {
                       <MapPin className="w-4 h-4 text-accent" />
                     </div>
                     <div>
-                      <p className="font-sans font-semibold uppercase text-[10px] tracking-[0.2em] text-white/30 mb-2">Service Area</p>
-                      <p className="text-lg font-medium text-white">Eastern & Central Pennsylvania</p>
+                      <p className="font-sans font-semibold uppercase text-[10px] tracking-[0.2em] text-white/30 mb-2">Office</p>
+                      <p className="text-lg font-medium text-white">1043 Koffel Rd</p>
+                      <p className="text-white/60">Hatfield, PA 19440</p>
+                      <p className="text-white/40 text-sm mt-2">Serving Eastern & Central Pennsylvania</p>
                     </div>
                   </div>
                 </div>

@@ -103,7 +103,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="relative h-[450px] md:h-[550px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
-                <ImagePlaceholder label="Photo: M&K Owners Mike and Sam" className="absolute inset-0 w-full h-full object-cover" />
+                <ImagePlaceholder label="Photo: Completed M&K project — finished site work, Pennsylvania" className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 gold-gradient z-[-1] hidden md:block" />
               <div className="absolute -top-4 -right-4 w-20 h-20 border-2 border-accent/30 z-[-1] hidden md:block" />
