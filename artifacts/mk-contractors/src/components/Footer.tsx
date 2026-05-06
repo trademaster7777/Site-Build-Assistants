@@ -16,11 +16,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           
           <div>
-            <Link href="/" className="inline-block mb-8 bg-white p-3 rounded-sm">
+            <Link href="/" className="inline-block mb-8 bg-white p-4 rounded-sm">
               <img
                 src="/mk-logo.png"
                 alt="M&K Contractors LLC — Hatfield, PA"
-                className="h-16 w-auto object-contain"
+                className="h-24 md:h-28 w-auto object-contain"
               />
             </Link>
             <p className="text-white/40 mb-8 max-w-sm leading-relaxed text-sm">
