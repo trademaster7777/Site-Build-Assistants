@@ -19,7 +19,7 @@ export default function About() {
     <div className="min-h-screen bg-background text-foreground pt-20">
       <Header />
 
-      <section className="relative bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] py-28 md:py-36 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] py-16 md:py-36 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <ImagePlaceholder number={15} label="About page hero background" className="w-full h-full object-cover opacity-20" />
         </div>
@@ -28,23 +28,23 @@ export default function About() {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb items={[{ label: "About Us" }]} />
           <div className="section-divider mt-8 mb-8" />
-          <h1 className="font-display font-black text-4xl md:text-5xl lg:text-[64px] text-white uppercase max-w-4xl mb-6 leading-[1.05] tracking-tight">
+          <h1 className="font-display font-black text-[32px] sm:text-4xl md:text-5xl lg:text-[64px] text-white uppercase max-w-4xl mb-6 leading-[1.05] tracking-tight break-words">
             About M&K Contractors
           </h1>
-          <p className="text-xl md:text-2xl text-white/60 max-w-3xl font-medium leading-relaxed">
+          <p className="text-base sm:text-lg md:text-2xl text-white/60 max-w-3xl font-medium leading-relaxed">
             Built on Honesty, Knowledge, and 20+ Years of Hands-On Experience.
           </p>
         </div>
       </section>
 
-      <section className="py-24 md:py-36 bg-[#F5F5F5] text-[#1C1C1E]">
+      <section className="py-16 md:py-36 bg-[#F5F5F5] text-[#1C1C1E]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent mb-4 block">Our Story</span>
-              <h2 className="font-display font-black text-3xl md:text-4xl lg:text-[44px] mb-6 uppercase tracking-tight leading-[1.1]">A Foundation of Expertise</h2>
-              <div className="section-divider mb-10" />
-              <div className="space-y-6 text-lg text-gray-600 leading-[1.8]">
+              <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-[44px] mb-6 uppercase tracking-tight leading-[1.1]">A Foundation of Expertise</h2>
+              <div className="section-divider mb-8 md:mb-10" />
+              <div className="space-y-5 md:space-y-6 text-base md:text-lg text-gray-600 leading-[1.8]">
                 <p>
                   M&K Contractors LLC was founded in 2018 by Mike and Sam — two industry veterans with a combined 20-plus years of experience in excavation, heavy equipment operation, and site contracting. The company was built from the ground up with a straightforward philosophy: do the work right, do it ourselves, and treat every client with complete transparency. What started as a small operation has grown into a trusted specialty contracting firm serving general contractors, developers, and municipalities across Eastern and Central Pennsylvania.
                 </p>
@@ -54,7 +54,7 @@ export default function About() {
               </div>
             </div>
             <div className="relative">
-              <div className="relative h-[520px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)] rounded-sm">
+              <div className="relative h-[320px] sm:h-[440px] md:h-[520px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)] rounded-sm">
                 <ImagePlaceholder number={16} label="Our Story photo — Completed commercial site in Pennsylvania" className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-5 -left-5 w-28 h-28 gold-gradient z-[-1] hidden md:block" />
@@ -64,23 +64,23 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-28 bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] text-white subtle-noise overflow-hidden relative">
+      <section className="py-16 md:py-28 bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] text-white subtle-noise overflow-hidden relative">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
             <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent/80 mb-4 block">Why M&K</span>
-            <h2 className="font-display font-black text-3xl md:text-4xl mb-6 uppercase tracking-tight">Why General Contractors and Municipalities Choose Us</h2>
+            <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl mb-6 uppercase tracking-tight">Why General Contractors and Municipalities Choose Us</h2>
             <div className="section-divider mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7">
             {[
               { icon: Users, title: "Direct Owner Contact", desc: "You will never be passed off to a call center or a junior project manager. Mike and Sam are personally involved in every project from bid to completion." },
               { icon: Shield, title: "No Subcontracting — Ever", desc: "When you hire M&K Contractors, our team shows up. We do not win work just to hand it off to someone else." },
               { icon: Truck, title: "Specialized Equipment Fleet", desc: "We own and maintain a fleet of excavators, skid steers, compactors, and dump trucks purpose-built for the work we do." },
               { icon: FileText, title: "Competitive, Transparent Pricing", desc: "We provide detailed, written proposals within one week of a site evaluation. Our pricing is fair, our communication is clear." },
             ].map((item, idx) => (
-              <div key={idx} className="premium-card p-8 relative rounded-sm group hover:-translate-y-1 transition-all duration-500">
+              <div key={idx} className="premium-card p-6 sm:p-8 relative rounded-sm group hover:-translate-y-1 transition-all duration-500">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-accent-alt rounded-t-sm" />
                 <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-300">
                   <item.icon className="w-6 h-6 text-accent" />
@@ -93,18 +93,18 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-28 bg-[#F5F5F5] text-[#1C1C1E]">
+      <section className="py-16 md:py-28 bg-[#F5F5F5] text-[#1C1C1E]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-20">
+          <div className="max-w-3xl mb-12 md:mb-20">
             <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent mb-4 block">Equipment</span>
-            <h2 className="font-display font-black text-3xl md:text-4xl mb-6 uppercase tracking-tight">What We Bring to the Job Site</h2>
-            <div className="section-divider mb-10" />
-            <p className="text-lg text-gray-600 leading-[1.8]">
+            <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl mb-6 uppercase tracking-tight">What We Bring to the Job Site</h2>
+            <div className="section-divider mb-8 md:mb-10" />
+            <p className="text-base md:text-lg text-gray-600 leading-[1.8]">
               Our equipment fleet is maintained to the highest standards and purpose-built for the scope of work we take on. From precision mini excavators for tight utility trenching to dump trucks for bulk earthmoving, every piece of equipment we own serves a specific function on Pennsylvania job sites.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7">
             {[
               { title: "Track Skid Steers (e.g., Kubota SVL97)", desc: "Site grading, backfill, material handling", imgLabel: "Photo: Track Skid Steer on site" },
               { title: "Mini Excavators (e.g., Komatsu PC55)", desc: "Precision trenching, utility excavation", imgLabel: "Photo: Mini Excavator trenching" },
@@ -124,14 +124,14 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-28 bg-[#1C1C1E] relative subtle-noise overflow-hidden">
+      <section className="py-16 md:py-28 bg-[#1C1C1E] relative subtle-noise overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
           <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent/80 mb-6 block">Get Started</span>
-          <h2 className="font-display font-black text-3xl md:text-4xl mb-10 uppercase text-white tracking-tight">Let's Talk About Your Next Project</h2>
+          <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl mb-8 md:mb-10 uppercase text-white tracking-tight">Let's Talk About Your Next Project</h2>
           <Link 
             href="/contact" 
-            className="btn-premium inline-flex items-center justify-center px-12 py-5 text-[#1C1C1E] font-sans font-bold text-lg uppercase tracking-[0.12em] rounded-sm"
+            className="btn-premium inline-flex items-center justify-center px-8 sm:px-12 py-4 sm:py-5 text-[#1C1C1E] font-sans font-bold text-sm sm:text-lg uppercase tracking-[0.12em] rounded-sm"
             data-testid="link-about-cta"
           >
             Request a Project Evaluation

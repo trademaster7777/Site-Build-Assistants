@@ -22,32 +22,32 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground pt-20">
       <Header />
 
-      <section className="relative bg-[#1C1C1E] min-h-[92vh] flex items-center overflow-hidden">
+      <section className="relative bg-[#1C1C1E] min-h-[78vh] md:min-h-[92vh] flex items-center overflow-hidden py-20 md:py-0">
         <div className="absolute inset-0 z-0">
           <ImagePlaceholder number={1} label="Hero background — Excavator on municipal job site (Bucks County, PA)" className="w-full h-full object-cover opacity-30" />
         </div>
         <div className="absolute inset-0 hero-overlay z-[1]" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent z-[2]" />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 md:pt-10">
           <div className="max-w-5xl">
-            <div className="section-divider mb-8" />
-            <h1 className="font-display font-black text-5xl md:text-6xl lg:text-[76px] text-white uppercase leading-[1.05] mb-8 tracking-tight">
+            <div className="section-divider mb-6 md:mb-8" />
+            <h1 className="font-display font-black text-[34px] sm:text-5xl md:text-6xl lg:text-[76px] text-white uppercase leading-[1.05] mb-6 md:mb-8 tracking-tight break-words">
               Precision Excavation & Site Contracting Across <span className="gold-text">Pennsylvania</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/70 max-w-3xl mb-12 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mb-8 md:mb-12 leading-relaxed">
               We do our own work — no subcontracting, no middlemen. Just reliable, expert site development and infrastructure excavation from a dedicated team with over 20 years of combined experience.
             </p>
-            <div className="flex flex-col sm:flex-row gap-5">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
               <Link 
                 href="/contact" 
-                className="btn-premium inline-flex items-center justify-center px-10 py-4.5 text-[#1C1C1E] font-sans font-bold text-base uppercase tracking-[0.1em] rounded-sm"
+                className="btn-premium inline-flex items-center justify-center px-6 sm:px-10 py-4 sm:py-4.5 text-[#1C1C1E] font-sans font-bold text-sm sm:text-base uppercase tracking-[0.1em] rounded-sm text-center"
                 data-testid="link-hero-primary"
               >
                 Request a Project Evaluation
               </Link>
               <Link 
                 href="/projects" 
-                className="btn-outline-premium inline-flex items-center justify-center px-10 py-4.5 text-white font-sans font-bold text-base uppercase tracking-[0.1em] rounded-sm"
+                className="btn-outline-premium inline-flex items-center justify-center px-6 sm:px-10 py-4 sm:py-4.5 text-white font-sans font-bold text-sm sm:text-base uppercase tracking-[0.1em] rounded-sm text-center"
                 data-testid="link-hero-secondary"
               >
                 View Our Projects
@@ -86,14 +86,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 md:py-36 bg-[#F5F5F5] text-[#1C1C1E]">
+      <section className="py-16 md:py-36 bg-[#F5F5F5] text-[#1C1C1E]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent mb-4 block">The M&K Difference</span>
-              <h2 className="font-display font-black text-4xl md:text-5xl lg:text-[52px] mb-6 uppercase tracking-tight leading-[1.1]">Built Different. Built to Last.</h2>
-              <div className="section-divider mb-10" />
-              <p className="text-lg leading-[1.8] text-gray-600 mb-10">
+              <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-6 uppercase tracking-tight leading-[1.1]">Built Different. Built to Last.</h2>
+              <div className="section-divider mb-8 md:mb-10" />
+              <p className="text-base md:text-lg leading-[1.8] text-gray-600 mb-8 md:mb-10">
                 At M&K Contractors, we take pride in staying small and focused so we can deliver results that larger firms cannot match. When you hire us, you work directly with the owners — not a project coordinator three layers removed from the job site. We do not subcontract our work to third parties. Our own crew, our own specialized equipment, and our own commitment to quality show up to every project. Whether it is a complex public water infrastructure installation or large-scale commercial grading, M&K delivers with precision and accountability.
               </p>
               <Link 
@@ -106,7 +106,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="relative">
-              <div className="relative h-[450px] md:h-[550px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
+              <div className="relative h-[300px] sm:h-[450px] md:h-[550px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
                 <ImagePlaceholder number={2} label="Featured project — Completed M&K site work in Pennsylvania" className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 gold-gradient z-[-1] hidden md:block" />
@@ -116,19 +116,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-28 md:py-36 bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] text-white relative subtle-noise overflow-hidden">
+      <section className="py-16 md:py-36 bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] text-white relative subtle-noise overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
             <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent/80 mb-4 block">Our Expertise</span>
-            <h2 className="font-display font-black text-4xl md:text-5xl lg:text-[52px] mb-6 uppercase tracking-tight">What We Do</h2>
-            <div className="section-divider mx-auto mb-10" />
-            <p className="text-lg text-white/50 leading-relaxed">
+            <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-6 uppercase tracking-tight">What We Do</h2>
+            <div className="section-divider mx-auto mb-8 md:mb-10" />
+            <p className="text-base md:text-lg text-white/50 leading-relaxed">
               Specialized excavation and site contracting services for commercial and public sector projects throughout Pennsylvania.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
             {[
               {
                 icon: Building2,
@@ -174,7 +174,7 @@ export default function Home() {
                     <service.icon className="w-5 h-5 text-[#1C1C1E]" />
                   </div>
                 </div>
-                <div className="p-8 flex flex-col flex-grow">
+                <div className="p-6 sm:p-8 flex flex-col flex-grow">
                   <h3 className="font-display font-bold text-lg uppercase mb-3 text-white tracking-wide">{service.title}</h3>
                   <p className="text-white/50 mb-8 flex-grow text-sm leading-relaxed">{service.desc}</p>
                   <Link 
@@ -192,14 +192,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-28 md:py-36 bg-[#F5F5F5] text-[#1C1C1E]">
+      <section className="py-16 md:py-36 bg-[#F5F5F5] text-[#1C1C1E]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 md:mb-20 gap-8">
             <div className="max-w-2xl">
               <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent mb-4 block">Portfolio</span>
-              <h2 className="font-display font-black text-4xl md:text-5xl mb-6 uppercase tracking-tight">Real Work. Real Results.</h2>
+              <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl mb-6 uppercase tracking-tight">Real Work. Real Results.</h2>
               <div className="section-divider mb-8" />
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                 Every photo on this site is from an actual M&K Contractors job site in Pennsylvania. We believe the best proof of our capabilities is the work itself.
               </p>
             </div>
@@ -213,7 +213,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-5">
             {[
               "Stormwater Pipe Installation — Montgomery County, PA",
               "Mass Grading — Commercial Site, Bucks County, PA",
@@ -223,7 +223,7 @@ export default function Home() {
               "Utility Trenching — Delaware County, PA"
             ].map((caption, idx) => (
               <div key={idx} className="group cursor-pointer">
-                <div className="relative h-72 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-sm">
+                <div className="relative h-60 sm:h-72 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-sm">
                   <ImagePlaceholder number={8 + idx} label={caption} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1E]/80 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -237,16 +237,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-28 bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] text-white relative subtle-noise overflow-hidden">
+      <section className="py-16 md:py-28 bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] text-white relative subtle-noise overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 md:mb-20">
             <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent/80 mb-4 block">Testimonials</span>
-            <h2 className="font-display font-black text-4xl md:text-5xl mb-6 uppercase tracking-tight">What Our Clients Say</h2>
+            <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl mb-6 uppercase tracking-tight">What Our Clients Say</h2>
             <div className="section-divider mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 text: "Great company to work with. They answered all of my questions, did exactly the job they said they would, and had a very fair price for the work performed. I would work with M&K again any day.",
@@ -261,7 +261,7 @@ export default function Home() {
                 author: "Brandon"
               }
             ].map((testimonial, idx) => (
-              <div key={idx} className="premium-card p-10 relative rounded-sm group hover:-translate-y-1 transition-all duration-500">
+              <div key={idx} className="premium-card p-6 sm:p-10 relative rounded-sm group hover:-translate-y-1 transition-all duration-500">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-accent-alt rounded-t-sm" />
                 <svg className="absolute top-8 right-8 w-10 h-10 text-white/5" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
@@ -284,19 +284,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#F5F5F5] text-[#1C1C1E]">
+      <section className="py-16 md:py-24 bg-[#F5F5F5] text-[#1C1C1E]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 h-[420px] md:h-[480px] relative overflow-hidden rounded-sm shadow-[0_20px_60px_rgba(0,0,0,0.18)] border border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="order-2 lg:order-1 h-[320px] sm:h-[420px] md:h-[480px] relative overflow-hidden rounded-sm shadow-[0_20px_60px_rgba(0,0,0,0.18)] border border-white/5">
               <Suspense fallback={<div className="absolute inset-0 bg-[#1C1C1E] flex items-center justify-center text-white/40 text-xs uppercase tracking-[0.25em]">Loading map…</div>}>
                 <ServiceAreaMap />
               </Suspense>
             </div>
             <div className="order-1 lg:order-2">
               <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent mb-4 block">Coverage Area</span>
-              <h2 className="font-display font-black text-4xl md:text-5xl mb-6 uppercase tracking-tight">Serving Pennsylvania</h2>
-              <div className="section-divider mb-10" />
-              <p className="text-lg leading-[1.8] text-gray-600">
+              <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl mb-6 uppercase tracking-tight">Serving Pennsylvania</h2>
+              <div className="section-divider mb-8 md:mb-10" />
+              <p className="text-base md:text-lg leading-[1.8] text-gray-600">
                 M&K Contractors serves commercial and public sector clients across Eastern and Central Pennsylvania. Our primary service area includes Bucks County, Montgomery County, Chester County, Delaware County, Lehigh County, Northampton County, Berks County, and the greater Philadelphia metropolitan region. Contact us to confirm availability for your specific project location.
               </p>
             </div>
@@ -304,7 +304,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#1C1C1E] relative overflow-hidden subtle-noise">
+      <section className="py-20 md:py-32 bg-[#1C1C1E] relative overflow-hidden subtle-noise">
         <div className="absolute inset-0 z-0">
           <ImagePlaceholder number={14} label="Bottom CTA background — M&K equipment on active site at sunset" className="w-full h-full object-cover opacity-15" />
         </div>
@@ -312,13 +312,13 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent z-[2]" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent/80 mb-6 block">Get Started</span>
-          <h2 className="font-display font-black text-4xl md:text-6xl text-white mb-8 uppercase tracking-tight">Ready to Break Ground?</h2>
-          <p className="text-xl text-white/50 max-w-2xl mx-auto mb-14 leading-relaxed">
+          <h2 className="font-display font-black text-3xl sm:text-4xl md:text-6xl text-white mb-6 md:mb-8 uppercase tracking-tight">Ready to Break Ground?</h2>
+          <p className="text-base sm:text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-10 md:mb-14 leading-relaxed">
             Submit your project details today. We provide free site evaluations and written proposals within one week — no strings attached.
           </p>
           <Link 
             href="/contact" 
-            className="btn-premium inline-flex items-center justify-center px-12 py-5 text-[#1C1C1E] font-sans font-bold text-lg uppercase tracking-[0.12em] rounded-sm"
+            className="btn-premium inline-flex items-center justify-center px-8 sm:px-12 py-4 sm:py-5 text-[#1C1C1E] font-sans font-bold text-sm sm:text-lg uppercase tracking-[0.12em] rounded-sm"
             data-testid="link-home-bottom-cta"
           >
             Get Your Free Estimate

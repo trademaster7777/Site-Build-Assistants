@@ -52,26 +52,26 @@ export default function Contact() {
     <div className="min-h-screen bg-background text-foreground pt-20">
       <Header />
 
-      <section className="bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] py-20 md:py-28 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] py-14 md:py-28 relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent z-[2]" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Breadcrumb items={[{ label: "Contact" }]} />
           <div className="section-divider mt-8 mb-8" />
-          <h1 className="font-display font-black text-4xl md:text-5xl lg:text-[64px] text-white uppercase mt-4 mb-6 tracking-tight leading-[1.05]">
+          <h1 className="font-display font-black text-[32px] sm:text-4xl md:text-5xl lg:text-[64px] text-white uppercase mt-4 mb-6 tracking-tight leading-[1.05] break-words">
             Request a Project Evaluation
           </h1>
-          <p className="text-lg text-accent font-semibold uppercase tracking-[0.2em] mb-8">
+          <p className="text-sm sm:text-base md:text-lg text-accent font-semibold uppercase tracking-[0.2em] mb-8">
             Free estimates. Written proposals within one week. No strings attached.
           </p>
-          <p className="text-white/50 text-lg max-w-3xl leading-[1.8]">
+          <p className="text-white/50 text-base md:text-lg max-w-3xl leading-[1.8]">
             Whether you are a general contractor looking for a reliable excavation subcontractor, a developer preparing a commercial site, or a municipality putting an infrastructure project out to bid, M&K Contractors is ready to get to work.
           </p>
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-[#F5F5F5]">
+      <section className="py-14 md:py-28 bg-[#F5F5F5]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
             
             <div className="w-full lg:w-[60%]">
               {isSubmitted ? (
@@ -94,8 +94,8 @@ export default function Contact() {
                   </button>
                 </div>
               ) : (
-                <div className="premium-card-light p-10 md:p-12 rounded-sm">
-                  <h2 className="font-display font-black text-2xl mb-10 uppercase border-b border-gray-200 pb-6 text-[#1C1C1E]">Project Details</h2>
+                <div className="premium-card-light p-6 sm:p-10 md:p-12 rounded-sm">
+                  <h2 className="font-display font-black text-xl sm:text-2xl mb-8 md:mb-10 uppercase border-b border-gray-200 pb-5 md:pb-6 text-[#1C1C1E]">Project Details</h2>
                   
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-7">
@@ -244,9 +244,9 @@ export default function Contact() {
             </div>
 
             <div className="w-full lg:w-[40%] space-y-8">
-              <div className="premium-card p-10 rounded-sm relative overflow-hidden">
+              <div className="premium-card p-6 sm:p-10 rounded-sm relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-accent-alt" />
-                <h3 className="font-display font-black text-xl uppercase mb-10 text-white border-b border-white/5 pb-6 tracking-wide">Direct Contact</h3>
+                <h3 className="font-display font-black text-xl uppercase mb-8 sm:mb-10 text-white border-b border-white/5 pb-5 sm:pb-6 tracking-wide">Direct Contact</h3>
                 
                 <div className="space-y-8">
                   <div className="flex items-start space-x-5">
@@ -303,13 +303,13 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="mt-28 pt-20 border-t border-gray-200">
-            <div className="text-center mb-20">
+          <div className="mt-16 md:mt-28 pt-14 md:pt-20 border-t border-gray-200">
+            <div className="text-center mb-12 md:mb-20">
               <span className="font-sans font-semibold text-xs uppercase tracking-[0.25em] text-accent mb-4 block">Process</span>
-              <h2 className="font-display font-black text-3xl md:text-4xl uppercase tracking-tight text-[#1C1C1E]">How It Works</h2>
+              <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl uppercase tracking-tight text-[#1C1C1E]">How It Works</h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 relative">
               <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-px bg-gradient-to-r from-accent/30 via-accent to-accent/30 z-0" />
               
               {[

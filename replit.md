@@ -34,6 +34,7 @@ pnpm workspace monorepo using TypeScript. Contains the M&K Contractors LLC marke
 - **Routing**: `ScrollToTop` component (in `src/components/ScrollToTop.tsx`, mounted in App.tsx) resets scroll on every wouter location change — required because wouter does not auto-scroll on navigation
 - **Service area map**: `ServiceAreaMap` component (in `src/components/ServiceAreaMap.tsx`) — uses real US Census county geometry from `us-atlas/counties-10m.json`, rendered with `d3-geo` (geoMercator + fitExtent) and `topojson-client`. Highlights the 8 served counties (Bucks, Montgomery, Chester, Delaware, Lehigh, Northampton, Berks, Philadelphia) in the M&K amber gradient with a HATFIELD HQ badge over the Hatfield pin (40.2807°N, 75.2974°W). All other PA counties shown in dark gray with amber outlines. Fully vector — no raster image asset.
 - **No backend required** — static frontend only, contact form uses client-side success state
+- **Mobile-optimized**: All pages use responsive padding (`py-16 md:py-32`), responsive headings (`text-2xl/3xl sm: md:`), responsive image heights (`h-[300px] sm:h-[450px]`), responsive card padding (`p-6 sm:p-10`). Header has hamburger menu (`lg:hidden`); top utility bar hidden on mobile. Verified at 390x844 viewport.
 
 ## Key Commands
 
