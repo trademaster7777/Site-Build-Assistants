@@ -55,13 +55,13 @@ export function Header() {
 
       <div className={`transition-all duration-500 ${isScrolled ? 'bg-white/98 backdrop-blur-xl' : 'bg-white'} border-b border-gray-200`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20 md:h-[92px] gap-6">
+          <div className="flex justify-between items-center h-24 md:h-[120px] gap-6">
             
             <Link href="/" className="flex items-center flex-shrink-0" data-testid="link-logo">
               <img
                 src="/mk-logo.png"
                 alt="M&K Contractors LLC — Hatfield, PA"
-                className="h-16 md:h-[76px] w-auto object-contain"
+                className="h-20 md:h-[104px] w-auto object-contain"
               />
             </Link>
 
