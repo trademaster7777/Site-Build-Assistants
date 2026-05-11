@@ -28,7 +28,7 @@ export default function Projects() {
     { id: 12, caption: "Stormwater management system — Delaware County, PA", category: "Infrastructure" }
   ];
 
-  const filters = ["All", "Site Development", "Utilities", "Infrastructure", "Demolition"];
+  const filters = ["All", "Site Development", "Utilities", "Infrastructure"];
 
   const filteredProjects = filter === "All" 
     ? projects 
