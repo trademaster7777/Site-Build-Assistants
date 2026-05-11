@@ -28,10 +28,10 @@ export default function Home() {
           <HeroVideo
             src={`${import.meta.env.BASE_URL}video/hero.mp4`}
             poster={`${import.meta.env.BASE_URL}video/hero-poster.jpg`}
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 hero-overlay z-[1]" />
+        <div className="absolute inset-0 hero-video-overlay z-[1]" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent z-[2]" />
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 md:pt-10">
           <div className="max-w-5xl">
