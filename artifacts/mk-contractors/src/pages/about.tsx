@@ -112,9 +112,8 @@ export default function About() {
               { title: "Dump Trucks", desc: "Bulk material hauling and earthmoving", imgLabel: "Photo: Dump truck hauling fill" }
             ].map((item, idx) => (
               <div key={idx} className="group">
-                <div className="relative h-52 mb-5 overflow-hidden rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.1)]">
-                  <ImagePlaceholder number={17 + idx} label={item.imgLabel} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e]/50 via-transparent to-transparent" />
+                <div className="relative aspect-[4/3] mb-5 overflow-hidden rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.1)] bg-[#1C1C1E]">
+                  <ImagePlaceholder number={17 + idx} label={item.imgLabel} className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <h3 className="font-display font-bold text-base uppercase mb-2 tracking-wide">{item.title}</h3>
                 <p className="text-gray-500 text-sm">{item.desc}</p>
