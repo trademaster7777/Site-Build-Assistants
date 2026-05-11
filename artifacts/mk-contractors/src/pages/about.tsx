@@ -113,7 +113,7 @@ export default function About() {
             ].map((item, idx) => (
               <div key={idx} className="group">
                 <div className="relative aspect-[4/3] mb-5 overflow-hidden rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.1)] bg-[#1C1C1E]">
-                  <ImagePlaceholder number={17 + idx} label={item.imgLabel} className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+                  <ImagePlaceholder number={17 + idx} label={item.imgLabel} fillBlur className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <h3 className="font-display font-bold text-base uppercase mb-2 tracking-wide">{item.title}</h3>
                 <p className="text-gray-500 text-sm">{item.desc}</p>

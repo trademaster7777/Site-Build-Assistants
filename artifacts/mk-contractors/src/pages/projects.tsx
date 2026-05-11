@@ -85,6 +85,7 @@ export default function Projects() {
                   <ImagePlaceholder
                     number={25 + project.id}
                     label={project.caption}
+                    fillBlur
                     className="absolute inset-0 w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e]/40 via-transparent to-transparent pointer-events-none" />

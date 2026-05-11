@@ -5,12 +5,36 @@ interface ImagePlaceholderProps {
   number?: number;
   className?: string;
   decorative?: boolean;
+  fillBlur?: boolean;
 }
 
-export function ImagePlaceholder({ label, number, className = "", decorative = false }: ImagePlaceholderProps) {
+export function ImagePlaceholder({ label, number, className = "", decorative = false, fillBlur = false }: ImagePlaceholderProps) {
   const src = getPhoto(number);
 
   if (src) {
+    if (fillBlur) {
+      return (
+        <>
+          <img
+            src={src}
+            alt=""
+            aria-hidden
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-70"
+          />
+          <img
+            src={src}
+            alt={decorative ? "" : label}
+            aria-hidden={decorative || undefined}
+            loading="lazy"
+            decoding="async"
+            className={className}
+            data-testid={`image-photo-${number}`}
+          />
+        </>
+      );
+    }
     return (
       <img
         src={src}
