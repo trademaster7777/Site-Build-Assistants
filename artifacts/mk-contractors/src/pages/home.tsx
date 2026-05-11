@@ -144,7 +144,7 @@ export default function Home() {
               },
               {
                 icon: Layers,
-                title: "Commercial Site Development",
+                title: "Site Development",
                 desc: "Complete site preparation, grading, land clearing, and earthwork for commercial construction.",
                 link: "/services/commercial-site-development",
                 imgLabel: "Photo: Commercial grading with dozer"
@@ -165,7 +165,7 @@ export default function Home() {
               },
               {
                 icon: Fence,
-                title: "Retaining Walls & Hardscaping",
+                title: "Hardscaping",
                 desc: "Structural retaining wall preparation and commercial hardscape grading.",
                 link: "/services/retaining-walls",
                 imgLabel: "Photo: Retaining wall prep"
