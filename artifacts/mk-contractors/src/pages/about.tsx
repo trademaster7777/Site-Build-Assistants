@@ -21,7 +21,7 @@ export default function About() {
 
       <section className="relative bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] py-16 md:py-36 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <ImagePlaceholder number={15} label="About page hero background" className="w-full h-full object-cover opacity-20" />
+          <ImagePlaceholder number={15} label="About page hero background" decorative className="w-full h-full object-cover opacity-20" />
         </div>
         <div className="absolute inset-0 hero-overlay z-[1]" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent z-[2]" />

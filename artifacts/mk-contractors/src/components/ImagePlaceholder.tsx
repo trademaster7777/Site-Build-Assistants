@@ -1,10 +1,29 @@
+import { getPhoto } from "@/lib/photos";
+
 interface ImagePlaceholderProps {
   label: string;
   number?: number;
   className?: string;
+  decorative?: boolean;
 }
 
-export function ImagePlaceholder({ label, number, className = "" }: ImagePlaceholderProps) {
+export function ImagePlaceholder({ label, number, className = "", decorative = false }: ImagePlaceholderProps) {
+  const src = getPhoto(number);
+
+  if (src) {
+    return (
+      <img
+        src={src}
+        alt={decorative ? "" : label}
+        aria-hidden={decorative || undefined}
+        loading="lazy"
+        decoding="async"
+        className={className}
+        data-testid={`image-photo-${number}`}
+      />
+    );
+  }
+
   return (
     <div
       className={`relative bg-gradient-to-br from-[#3a3a3c] via-[#2d2d2f] to-[#1c1c1e] flex items-center justify-center p-6 text-center text-sm font-medium text-white/60 ${className}`}

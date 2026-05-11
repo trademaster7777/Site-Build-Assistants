@@ -311,7 +311,7 @@ export default function Home() {
 
       <section className="py-20 md:py-32 bg-[#1C1C1E] relative overflow-hidden subtle-noise">
         <div className="absolute inset-0 z-0">
-          <ImagePlaceholder number={14} label="Bottom CTA background — M&K equipment on active site at sunset" className="w-full h-full object-cover opacity-15" />
+          <ImagePlaceholder number={14} label="Bottom CTA background — M&K equipment on active site at sunset" decorative className="w-full h-full object-cover opacity-15" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1E] via-[#1C1C1E]/80 to-[#1C1C1E]/60 z-[1]" />
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent z-[2]" />
