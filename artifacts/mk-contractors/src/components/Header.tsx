@@ -57,7 +57,7 @@ export function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-24 md:h-[120px] gap-6">
             
-            <Link href="/" className="flex items-center flex-shrink-0" data-testid="link-logo">
+            <Link href="/" className="flex items-center flex-shrink-0" data-testid="link-logo" aria-label="M&K Contractors LLC home">
               <img
                 src="/mk-logo.png"
                 alt="M&K Contractors LLC — Hatfield, PA"

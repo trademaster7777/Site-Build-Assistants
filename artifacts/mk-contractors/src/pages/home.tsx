@@ -186,9 +186,10 @@ export default function Home() {
                     href={service.link} 
                     className="inline-flex items-center text-accent font-sans font-bold uppercase tracking-[0.12em] text-xs hover:text-white transition-colors duration-300 group/link"
                     data-testid={`link-service-card-${idx}`}
+                    aria-label={`Learn more about ${service.title}`}
                   >
                     Learn More 
-                    <ArrowRight className="ml-2 h-3.5 w-3.5 transform group-hover/link:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="ml-2 h-3.5 w-3.5 transform group-hover/link:translate-x-1 transition-transform duration-300" aria-hidden="true" />
                   </Link>
                 </div>
               </div>

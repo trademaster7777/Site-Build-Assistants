@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           
           <div>
-            <Link href="/" className="inline-block mb-8 bg-white p-4 rounded-sm">
+            <Link href="/" className="inline-block mb-8 bg-white p-4 rounded-sm" aria-label="M&K Contractors LLC home">
               <img
                 src="/mk-logo.png"
                 alt="M&K Contractors LLC — Hatfield, PA"
