@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { HeroVideo } from "@/components/HeroVideo";
 import { Link } from "wouter";
 import { Building2, Layers, Wrench, HardHat, Fence, Users, Shield, FileText, ArrowRight } from "lucide-react";
 import { useEffect, lazy, Suspense } from "react";
@@ -24,7 +25,11 @@ export default function Home() {
 
       <section className="relative bg-[#1C1C1E] min-h-[78vh] md:min-h-[92vh] flex items-center overflow-hidden py-20 md:py-0">
         <div className="absolute inset-0 z-0">
-          <ImagePlaceholder number={1} label="Hero background — Excavator on municipal job site (Bucks County, PA)" className="w-full h-full object-cover opacity-30" />
+          <HeroVideo
+            src={`${import.meta.env.BASE_URL}video/hero.mp4`}
+            poster={`${import.meta.env.BASE_URL}video/hero-poster.jpg`}
+            className="w-full h-full object-cover opacity-40"
+          />
         </div>
         <div className="absolute inset-0 hero-overlay z-[1]" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent z-[2]" />
