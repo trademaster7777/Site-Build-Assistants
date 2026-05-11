@@ -36,7 +36,7 @@ export function ServicePage({ title, subheadline, overview, capabilities, faqs, 
           <ImagePlaceholder
             number={heroPhotoNumber}
             label={`Hero image for ${title}`}
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-70"
           />
         </div>
         <div className="absolute inset-0 hero-overlay z-[1]" />
