@@ -9,6 +9,7 @@ interface HeroVideoProps {
 export function HeroVideo({ src, poster, className = "" }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
@@ -51,7 +52,7 @@ export function HeroVideo({ src, poster, className = "" }: HeroVideoProps) {
         src={poster}
         alt=""
         aria-hidden="true"
-        className={className}
+        className={`${className} absolute inset-0 transition-opacity duration-700 ${isPlaying ? "opacity-0" : ""}`}
         loading="eager"
         decoding="async"
       />
@@ -67,6 +68,7 @@ export function HeroVideo({ src, poster, className = "" }: HeroVideoProps) {
           preload="auto"
           aria-hidden="true"
           tabIndex={-1}
+          onPlaying={() => setIsPlaying(true)}
           className={`${className} absolute inset-0`}
         />
       )}
