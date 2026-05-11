@@ -133,7 +133,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-7">
             {[
               {
                 icon: Building2,
@@ -171,7 +171,7 @@ export default function Home() {
                 imgLabel: "Photo: Retaining wall prep"
               }
             ].map((service, idx) => (
-              <div key={idx} className="premium-card group hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col rounded-sm">
+              <div key={idx} className={`premium-card group hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col rounded-sm lg:col-span-2 ${idx === 3 ? "lg:col-start-2" : ""}`}>
                 <div className="h-52 relative overflow-hidden">
                   <ImagePlaceholder number={3 + idx} label={service.imgLabel} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e] via-transparent to-transparent opacity-60" />
