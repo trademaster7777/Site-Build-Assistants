@@ -1,4 +1,4 @@
-const AVAILABLE_PHOTOS = new Set<number>([2, 3, 4, 5, 6, 7]);
+const AVAILABLE_PHOTOS = new Set<number>([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
 
 export function getPhoto(number: number | undefined): string | undefined {
   if (typeof number !== "number") return undefined;
