@@ -19,11 +19,11 @@ export default function Projects() {
     { id: 3, caption: "Stormwater pipe installation — Chester County, PA", category: "Utilities" },
     { id: 4, caption: "Municipal water service connection — Delaware County, PA", category: "Infrastructure" },
     { id: 5, caption: "Utility trench excavation — Lehigh County, PA", category: "Utilities" },
-    { id: 6, caption: "Structural demolition — commercial building, Philadelphia Metro, PA", category: "Demolition" },
+    { id: 6, caption: "Pole Barn Buildout — gravel drive and finished pole barn", category: "Site Development" },
     { id: 7, caption: "Retaining wall footing excavation — Berks County, PA", category: "Site Development" },
-    { id: 8, caption: "Sewer line installation — Northampton County, PA", category: "Infrastructure" },
-    { id: 9, caption: "Concrete removal and site clearing — Bucks County, PA", category: "Demolition" },
-    { id: 10, caption: "Septic system excavation — Montgomery County, PA", category: "Utilities" },
+    { id: 8, caption: "Water Line Installation — main service line trench to residence", category: "Utilities" },
+    { id: 9, caption: "Concrete Installation — poured walkway and entry steps", category: "Site Development" },
+    { id: 10, caption: "Water System Installation — Tetrasey filtration tanks on poured concrete pad", category: "Infrastructure" },
     { id: 11, caption: "Foundation excavation — Chester County, PA", category: "Site Development" },
     { id: 12, caption: "Stormwater management system — Delaware County, PA", category: "Infrastructure" }
   ];
