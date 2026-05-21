@@ -165,8 +165,8 @@ export default function Home() {
               },
               {
                 icon: Fence,
-                title: "Hardscaping",
-                desc: "Structural retaining wall preparation and commercial hardscape grading.",
+                title: "Site Restoration & Specialized Repairs",
+                desc: "Water main, sewer, and utility repairs with full site restoration after the work is done.",
                 link: "/services/retaining-walls",
                 imgLabel: "Photo: Retaining wall prep"
               }
