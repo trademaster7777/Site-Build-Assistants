@@ -45,8 +45,7 @@ export function ServicePage({ title, subheadline, overview, capabilities, faqs, 
               playsInline
               preload="metadata"
               poster={heroVideoPoster}
-              className="w-full h-full object-cover opacity-70"
-              style={objectPosStyle}
+              className="w-full h-full object-contain opacity-70"
               aria-label={`Hero video for ${title}`}
             >
               <source src={heroVideoSrc} type="video/mp4" />
