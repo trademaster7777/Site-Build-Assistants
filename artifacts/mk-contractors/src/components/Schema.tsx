@@ -24,7 +24,7 @@ export function LocalBusinessSchema() {
         "itemListElement": [
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Public Sector & Infrastructure", "url": "https://mkcontractorspa.com/services/public-sector-infrastructure"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Site Development - Residential", "url": "https://mkcontractorspa.com/services/commercial-site-development"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Utility Excavation", "url": "https://mkcontractorspa.com/services/utility-excavation"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial & Utility Excavation", "url": "https://mkcontractorspa.com/services/utility-excavation"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stormwater Management & Erosion Control", "url": "https://mkcontractorspa.com/services/stormwater-management"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Site Restoration & Specialized Repairs", "url": "https://mkcontractorspa.com/services/site-restoration"}}
         ]

@@ -201,7 +201,7 @@ export default function Contact() {
                               <SelectContent>
                                 <SelectItem value="Public Sector">Public Sector & Infrastructure</SelectItem>
                                 <SelectItem value="Site Development">Site Development - Residential</SelectItem>
-                                <SelectItem value="Utilities">Utility Excavation</SelectItem>
+                                <SelectItem value="Utilities">Commercial & Utility Excavation</SelectItem>
                                 <SelectItem value="Stormwater">Stormwater Management & Erosion Control</SelectItem>
                                 <SelectItem value="Site Restoration">Site Restoration & Specialized Repairs</SelectItem>
                                 <SelectItem value="Other">Other</SelectItem>

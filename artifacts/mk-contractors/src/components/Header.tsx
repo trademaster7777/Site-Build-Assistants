@@ -23,7 +23,7 @@ export function Header() {
   const serviceLinks = [
     { label: "Public Sector & Infrastructure", href: "/services/public-sector-infrastructure" },
     { label: "Site Development - Residential", href: "/services/commercial-site-development" },
-    { label: "Utility Excavation", href: "/services/utility-excavation" },
+    { label: "Commercial & Utility Excavation", href: "/services/utility-excavation" },
     { label: "Stormwater Management & Erosion Control", href: "/services/stormwater-management" },
     { label: "Site Restoration & Specialized Repairs", href: "/services/site-restoration" },
   ];

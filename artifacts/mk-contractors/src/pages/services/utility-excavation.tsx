@@ -10,7 +10,7 @@ export default function UtilityExcavation() {
     <ServicePage
       title="Private Utility Trenching & Underground Excavation"
       subheadline="Precision trenching for private commercial and residential utility installations — water, sewer, gas-ready conduit, electrical, and low-voltage."
-      serviceName="Utility Excavation"
+      serviceName="Commercial & Utility Excavation"
       heroPhotoNumber={23}
       overview={[
         "Utility excavation is the trenching itself — the disciplined cutting, shoring, bedding, and backfilling that makes underground infrastructure work. While our Public Sector practice handles bid-driven municipal work, this service line focuses on private utility trenching for commercial property owners, developers, electricians, plumbers, mechanical contractors, and homeowners who need a trench cut clean, deep, and safe.",
