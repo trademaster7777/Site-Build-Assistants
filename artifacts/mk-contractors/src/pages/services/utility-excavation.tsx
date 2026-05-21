@@ -12,6 +12,7 @@ export default function UtilityExcavation() {
       subheadline="Precision trenching for private commercial and residential utility installations — water, sewer, gas-ready conduit, electrical, and low-voltage."
       serviceName="Commercial & Utility Excavation"
       heroPhotoNumber={23}
+      heroObjectPosition="center 35%"
       overview={[
         "Utility excavation is the trenching itself — the disciplined cutting, shoring, bedding, and backfilling that makes underground infrastructure work. While our Public Sector practice handles bid-driven municipal work, this service line focuses on private utility trenching for commercial property owners, developers, electricians, plumbers, mechanical contractors, and homeowners who need a trench cut clean, deep, and safe.",
         "We bring the right machine for the trench — mini excavators for tight, shallow runs in finished landscaping, larger excavators with shoring boxes for deep sanitary or storm runs, and trench compactors to bring the backfill back to spec. Our crews routinely work on commercial buildouts, parking lot retrofits, restaurant gas and grease line installations, EV charger conduit runs, generator pads, and emergency private service repairs."
