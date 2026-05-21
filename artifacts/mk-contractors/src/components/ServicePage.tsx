@@ -24,20 +24,37 @@ export interface ServicePageProps {
   faqs: FAQ[];
   serviceName: string;
   heroPhotoNumber?: number;
+  heroVideoSrc?: string;
+  heroVideoPoster?: string;
 }
 
-export function ServicePage({ title, subheadline, overview, capabilities, faqs, serviceName, heroPhotoNumber }: ServicePageProps) {
+export function ServicePage({ title, subheadline, overview, capabilities, faqs, serviceName, heroPhotoNumber, heroVideoSrc, heroVideoPoster }: ServicePageProps) {
   return (
     <div className="min-h-screen bg-background text-foreground pt-20">
       <Header />
 
       <section className="relative bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] py-16 md:py-36 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <ImagePlaceholder
-            number={heroPhotoNumber}
-            label={`Hero image for ${title}`}
-            className="w-full h-full object-cover opacity-70"
-          />
+          {heroVideoSrc ? (
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster={heroVideoPoster}
+              className="w-full h-full object-cover opacity-70"
+              aria-label={`Hero video for ${title}`}
+            >
+              <source src={heroVideoSrc} type="video/mp4" />
+            </video>
+          ) : (
+            <ImagePlaceholder
+              number={heroPhotoNumber}
+              label={`Hero image for ${title}`}
+              className="w-full h-full object-cover opacity-70"
+            />
+          )}
         </div>
         <div className="absolute inset-0 hero-overlay z-[1]" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent z-[2]" />
