@@ -202,8 +202,8 @@ export default function Contact() {
                                 <SelectItem value="Public Sector">Public Sector & Infrastructure</SelectItem>
                                 <SelectItem value="Site Development">Commercial Site Development</SelectItem>
                                 <SelectItem value="Utilities">Utility Excavation</SelectItem>
-                                <SelectItem value="Demolition">Demolition Services</SelectItem>
-                                <SelectItem value="Retaining Walls">Retaining Walls & Hardscaping</SelectItem>
+                                <SelectItem value="Stormwater">Stormwater Management & Erosion Control</SelectItem>
+                                <SelectItem value="Site Restoration">Site Restoration & Specialized Repairs</SelectItem>
                                 <SelectItem value="Other">Other</SelectItem>
                               </SelectContent>
                             </Select>
@@ -297,7 +297,7 @@ export default function Contact() {
               <div className="premium-card-light p-8 rounded-sm border-l-4 border-accent">
                 <h3 className="font-display font-bold text-lg uppercase mb-3 text-[#1C1C1E] tracking-wide">Emergency Services</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">
-                  For emergency utility repair or demolition needs outside of normal business hours, please call our primary number and follow the prompts.
+                  For emergency water, sewer, or utility repair needs outside of normal business hours, please call our primary number and follow the prompts.
                 </p>
               </div>
             </div>

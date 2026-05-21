@@ -11,8 +11,8 @@ import Contact from "@/pages/contact";
 import PublicSector from "@/pages/services/public-sector-infrastructure";
 import CommercialSite from "@/pages/services/commercial-site-development";
 import UtilityExcavation from "@/pages/services/utility-excavation";
-import Demolition from "@/pages/services/demolition";
-import RetainingWalls from "@/pages/services/retaining-walls";
+import StormwaterManagement from "@/pages/services/stormwater-management";
+import SiteRestoration from "@/pages/services/site-restoration";
 
 import { LocalBusinessSchema } from "@/components/Schema";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -27,8 +27,8 @@ function Router() {
       <Route path="/services/public-sector-infrastructure" component={PublicSector} />
       <Route path="/services/commercial-site-development" component={CommercialSite} />
       <Route path="/services/utility-excavation" component={UtilityExcavation} />
-      <Route path="/services/demolition" component={Demolition} />
-      <Route path="/services/retaining-walls" component={RetainingWalls} />
+      <Route path="/services/stormwater-management" component={StormwaterManagement} />
+      <Route path="/services/site-restoration" component={SiteRestoration} />
       <Route path="/projects" component={Projects} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />

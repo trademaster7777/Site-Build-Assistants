@@ -15,7 +15,7 @@ export default function Home() {
     document.title = "Pennsylvania Excavation & Site Contracting | M&K Contractors LLC";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "M&K Contractors LLC provides expert excavation, site development, utility trenching, and demolition services across Pennsylvania. Family owned. No subcontracting. Free estimates.");
+      metaDescription.setAttribute("content", "M&K Contractors LLC provides expert excavation, site development, utility trenching, stormwater management, and site restoration services across Pennsylvania. Family owned. No subcontracting. Free estimates.");
     }
   }, []);
 
@@ -160,15 +160,15 @@ export default function Home() {
                 icon: HardHat,
                 title: "Stormwater Management & Erosion Control",
                 desc: "Stormwater management systems, erosion control measures, and site drainage solutions.",
-                link: "/services/demolition",
-                imgLabel: "Photo: Structural demolition"
+                link: "/services/stormwater-management",
+                imgLabel: "Photo: Stormwater infiltration bed"
               },
               {
                 icon: Fence,
                 title: "Site Restoration & Specialized Repairs",
                 desc: "Water main, sewer, and utility repairs with full site restoration after the work is done.",
-                link: "/services/retaining-walls",
-                imgLabel: "Photo: Retaining wall prep"
+                link: "/services/site-restoration",
+                imgLabel: "Photo: Water service repair"
               }
             ].map((service, idx) => (
               <div key={idx} className={`premium-card group hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col rounded-sm lg:col-span-2 ${idx === 3 ? "lg:col-start-2" : ""}`}>
@@ -224,8 +224,8 @@ export default function Home() {
               "Stormwater Pipe Installation — Montgomery County, PA",
               "Mass Grading — Commercial Site, Bucks County, PA",
               "Municipal Water Service — Chester County, PA",
-              "Structural Demolition — Philadelphia Metro, PA",
-              "Retaining Wall Excavation — Lehigh County, PA",
+              "Stormwater Infiltration Bed — Philadelphia Metro, PA",
+              "Water Service Repair — Lehigh County, PA",
               "Utility Trenching — Delaware County, PA"
             ].map((caption, idx) => (
               <div key={idx} className="group cursor-pointer">

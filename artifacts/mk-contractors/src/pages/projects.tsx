@@ -20,7 +20,7 @@ export default function Projects() {
     { id: 4, caption: "Municipal water service connection — Delaware County, PA", category: "Infrastructure" },
     { id: 5, caption: "Utility trench excavation — Lehigh County, PA", category: "Utilities" },
     { id: 6, caption: "Pole Barn Buildout — gravel drive and finished pole barn", category: "Site Development" },
-    { id: 7, caption: "Retaining wall footing excavation — Berks County, PA", category: "Site Development" },
+    { id: 7, caption: "Stormwater system rough-in — Berks County, PA", category: "Infrastructure" },
     { id: 8, caption: "Water Line Installation — main service line trench to residence", category: "Utilities" },
     { id: 9, caption: "Concrete Installation — poured walkway and entry steps", category: "Site Development" },
     { id: 10, caption: "Water System Installation — Tetrasey filtration tanks on poured concrete pad", category: "Infrastructure" },

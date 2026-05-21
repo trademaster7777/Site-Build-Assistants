@@ -27,7 +27,7 @@ export default function CommercialSite() {
         },
         {
           title: "Precision Laser Grading",
-          description: "Fine grading for building pads, parking lots, and hardscapes utilizing advanced laser technology for exacting tolerances."
+          description: "Fine grading for building pads, parking lots, and paved surfaces utilizing advanced laser technology for exacting tolerances."
         },
         {
           title: "Foundation & Basement Excavation",
