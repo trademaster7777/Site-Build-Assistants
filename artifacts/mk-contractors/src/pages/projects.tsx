@@ -21,7 +21,7 @@ export default function Projects() {
     { id: 5, caption: "Utility trench excavation — Lehigh County, PA", category: "Utilities" },
     { id: 6, caption: "Pole Barn Buildout — Gravel Drive and Finished Pole Barn, Philadelphia Metro", category: "Site Development" },
     { id: 7, caption: "Water Tank Delivery — Berks County, PA", category: "Infrastructure" },
-    { id: 8, caption: "Water Line Installation — main service line trench to residence", category: "Utilities" },
+    { id: 8, caption: "Water Treatment Installation — Northampton County, PA", category: "Infrastructure" },
     { id: 9, caption: "Concrete Installation — poured walkway and entry steps", category: "Site Development" },
     { id: 10, caption: "Water System Installation — Tetrasey filtration tanks on poured concrete pad", category: "Infrastructure" },
     { id: 11, caption: "Foundation excavation — Chester County, PA", category: "Site Development" },
