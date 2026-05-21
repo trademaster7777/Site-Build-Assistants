@@ -11,7 +11,7 @@ export default function StormwaterManagement() {
       title="Stormwater Management & Erosion Control in Pennsylvania"
       subheadline="Engineered drainage systems, sediment controls, and site stabilization that meet PA DEP and NPDES standards."
       serviceName="Stormwater Management & Erosion Control"
-      heroPhotoNumber={6}
+      heroPhotoNumber={24}
       overview={[
         "Every Pennsylvania construction site must control runoff, sediment, and erosion to protect downstream waterways and remain compliant with PA DEP, county conservation district, and NPDES permit requirements. M&K Contractors installs the underground infrastructure and surface stabilization measures that keep your site compliant from clearing through final stabilization.",
         "From subsurface infiltration beds and detention basins to silt fence, inlet protection, and stabilized construction entrances, we build the complete stormwater and erosion control package called for on your approved E&S plan. Our crews work directly from the engineer's drawings and coordinate inspections with the local conservation district so you stay on schedule."
