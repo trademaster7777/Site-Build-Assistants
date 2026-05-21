@@ -225,7 +225,7 @@ export default function Home() {
               "Mass Grading — Commercial Site, Bucks County, PA",
               "Municipal Water Service — Chester County, PA",
               "Basement Foundation Excavation — Residential Site Development, Philadelphia Metro",
-              "Water Service Repair — Lehigh County, PA",
+              "Downspout Drainage Installation — Montgomery County, PA",
               "Utility Trenching — Delaware County, PA"
             ].map((caption, idx) => (
               <div key={idx} className="group cursor-pointer">
