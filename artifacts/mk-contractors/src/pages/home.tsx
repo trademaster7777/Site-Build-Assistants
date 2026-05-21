@@ -224,7 +224,7 @@ export default function Home() {
               "Stormwater Pipe Installation — Montgomery County, PA",
               "Mass Grading — Commercial Site, Bucks County, PA",
               "Municipal Water Service — Chester County, PA",
-              "Stormwater Infiltration Bed — Philadelphia Metro, PA",
+              "Basement Foundation Excavation — Residential Site Development, Philadelphia Metro",
               "Water Service Repair — Lehigh County, PA",
               "Utility Trenching — Delaware County, PA"
             ].map((caption, idx) => (
