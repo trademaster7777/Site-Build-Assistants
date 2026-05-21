@@ -3,14 +3,14 @@ import { useEffect } from "react";
 
 export default function CommercialSite() {
   useEffect(() => {
-    document.title = "Commercial Site Preparation Pennsylvania | M&K Contractors";
+    document.title = "Residential Site Development Pennsylvania | M&K Contractors";
   }, []);
 
   return (
     <ServicePage
-      title="Commercial Site Preparation & Grading in Pennsylvania"
+      title="Residential Site Development in Pennsylvania"
       subheadline="Comprehensive earthwork, grading, and land clearing to get your commercial project started on solid ground."
-      serviceName="Commercial Site Development"
+      serviceName="Site Development - Residential"
       heroPhotoNumber={22}
       overview={[
         "The success of any commercial construction project begins long before the foundation is poured. M&K Contractors provides comprehensive commercial site preparation and grading services across Eastern and Central Pennsylvania. We understand that general contractors and developers operate on tight schedules where delays in earthwork cascade through the entire project timeline. That is why when we commit to a site development schedule, we mobilize our own specialized equipment and crew to meet it.",
