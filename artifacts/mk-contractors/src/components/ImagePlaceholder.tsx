@@ -6,9 +6,10 @@ interface ImagePlaceholderProps {
   className?: string;
   decorative?: boolean;
   fillBlur?: boolean;
+  style?: React.CSSProperties;
 }
 
-export function ImagePlaceholder({ label, number, className = "", decorative = false, fillBlur = false }: ImagePlaceholderProps) {
+export function ImagePlaceholder({ label, number, className = "", decorative = false, fillBlur = false, style }: ImagePlaceholderProps) {
   const src = getPhoto(number);
 
   if (src) {
@@ -30,6 +31,7 @@ export function ImagePlaceholder({ label, number, className = "", decorative = f
             loading="lazy"
             decoding="async"
             className={className}
+            style={style}
             data-testid={`image-photo-${number}`}
           />
         </>
@@ -43,6 +45,7 @@ export function ImagePlaceholder({ label, number, className = "", decorative = f
         loading="lazy"
         decoding="async"
         className={className}
+        style={style}
         data-testid={`image-photo-${number}`}
       />
     );

@@ -26,9 +26,11 @@ export interface ServicePageProps {
   heroPhotoNumber?: number;
   heroVideoSrc?: string;
   heroVideoPoster?: string;
+  heroObjectPosition?: string;
 }
 
-export function ServicePage({ title, subheadline, overview, capabilities, faqs, serviceName, heroPhotoNumber, heroVideoSrc, heroVideoPoster }: ServicePageProps) {
+export function ServicePage({ title, subheadline, overview, capabilities, faqs, serviceName, heroPhotoNumber, heroVideoSrc, heroVideoPoster, heroObjectPosition }: ServicePageProps) {
+  const objectPosStyle = heroObjectPosition ? { objectPosition: heroObjectPosition } : undefined;
   return (
     <div className="min-h-screen bg-background text-foreground pt-20">
       <Header />
@@ -44,6 +46,7 @@ export function ServicePage({ title, subheadline, overview, capabilities, faqs, 
               preload="metadata"
               poster={heroVideoPoster}
               className="w-full h-full object-cover opacity-70"
+              style={objectPosStyle}
               aria-label={`Hero video for ${title}`}
             >
               <source src={heroVideoSrc} type="video/mp4" />
@@ -53,6 +56,7 @@ export function ServicePage({ title, subheadline, overview, capabilities, faqs, 
               number={heroPhotoNumber}
               label={`Hero image for ${title}`}
               className="w-full h-full object-cover opacity-70"
+              style={objectPosStyle}
             />
           )}
         </div>
