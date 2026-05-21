@@ -158,8 +158,8 @@ export default function Home() {
               },
               {
                 icon: HardHat,
-                title: "Demolition Services",
-                desc: "Controlled structural demolition, concrete removal, and site clearing.",
+                title: "Stormwater Management & Erosion Control",
+                desc: "Stormwater management systems, erosion control measures, and site drainage solutions.",
                 link: "/services/demolition",
                 imgLabel: "Photo: Structural demolition"
               },
