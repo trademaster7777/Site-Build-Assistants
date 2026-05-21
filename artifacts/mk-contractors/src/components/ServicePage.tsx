@@ -38,18 +38,33 @@ export function ServicePage({ title, subheadline, overview, capabilities, faqs, 
       <section className="relative bg-gradient-to-br from-[#1c1c1e] via-[#222226] to-[#1c1c1e] py-16 md:py-36 overflow-hidden">
         <div className="absolute inset-0 z-0">
           {heroVideoSrc ? (
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster={heroVideoPoster}
-              className="w-full h-full object-contain opacity-70"
-              aria-label={`Hero video for ${title}`}
-            >
-              <source src={heroVideoSrc} type="video/mp4" />
-            </video>
+            <>
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster={heroVideoPoster}
+                className="absolute inset-0 w-full h-full object-cover opacity-50 scale-110 blur-2xl"
+                aria-hidden="true"
+                tabIndex={-1}
+              >
+                <source src={heroVideoSrc} type="video/mp4" />
+              </video>
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster={heroVideoPoster}
+                className="relative w-full h-full object-contain opacity-90"
+                aria-label={`Hero video for ${title}`}
+              >
+                <source src={heroVideoSrc} type="video/mp4" />
+              </video>
+            </>
           ) : (
             <ImagePlaceholder
               number={heroPhotoNumber}
