@@ -11,7 +11,7 @@ export default function SiteRestoration() {
       title="Site Restoration & Specialized Repairs in Pennsylvania"
       subheadline="Emergency water, sewer, and utility repairs with full site restoration when the work is finished."
       serviceName="Site Restoration & Specialized Repairs"
-      heroPhotoNumber={7}
+      heroPhotoNumber={25}
       overview={[
         "When a water main breaks, a sewer lateral collapses, or a buried utility fails, every hour costs money and disrupts operations. M&K Contractors responds quickly with the equipment, fittings, and experience to expose the failure, complete a clean repair, and put the site back together so the property looks like nothing happened.",
         "We work for property managers, municipalities, and general contractors across Eastern and Central Pennsylvania on water service repairs, sewer lateral replacements, and miscellaneous utility breaks. Just as importantly, we own the full restoration — asphalt patch, concrete flatwork, curb repair, topsoil, seed, and final grading — so you have one accountable contractor from the first dig to the last broom-sweep."
