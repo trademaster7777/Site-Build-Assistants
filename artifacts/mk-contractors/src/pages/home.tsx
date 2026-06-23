@@ -222,11 +222,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-5">
             {[
               "Stormwater Pipe Installation — Montgomery County, PA",
-              "Mass Grading — Commercial Site, Bucks County, PA",
-              "Municipal Water Service — Chester County, PA",
+              "Parking Lot Grading — Commercial Site, Bucks County, PA",
+              "Municipal Water Service Excavation — Chester County, PA",
               "Basement Foundation Excavation — Residential Site Development, Philadelphia Metro",
               "Downspout Drainage Installation — Montgomery County, PA",
-              "Utility Trenching — Delaware County, PA"
+              "Data Center Backup Generator Excavation — Delaware County, PA"
             ].map((caption, idx) => (
               <div key={idx} className="group cursor-pointer">
                 <div className="relative h-60 sm:h-72 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-sm">
