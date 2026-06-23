@@ -23,7 +23,7 @@ export default function Projects() {
     { id: 7, caption: "Water Tank Delivery — Berks County, PA", category: "Infrastructure" },
     { id: 8, caption: "Water Treatment Facility Excavation — Uwchlan Township, PA", category: "Infrastructure" },
     { id: 9, caption: "Concrete Installation — poured walkway and entry steps", category: "Site Development" },
-    { id: 10, caption: "Water System Installation — Tetrasey filtration tanks on poured concrete pad", category: "Infrastructure" },
+    { id: 10, caption: "PFAS Site Excavation", category: "Infrastructure" },
     { id: 11, caption: "Foundation Backfilling — Chester County, PA", category: "Site Development" },
     { id: 12, caption: "Stormwater management system — Delaware County, PA", category: "Infrastructure" }
   ];
