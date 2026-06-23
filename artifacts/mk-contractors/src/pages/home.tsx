@@ -152,7 +152,7 @@ export default function Home() {
               {
                 icon: Wrench,
                 title: "Commercial & Utility Excavation",
-                desc: "Precision trenching for water, sewer, stormwater, and conduit installations.",
+                desc: "Precision trenching for water, sewer, stormwater, and conduit — plus interior saw cutting, data center, EV charging, and backup generator utilities.",
                 link: "/services/utility-excavation",
                 imgLabel: "Photo: Utility trenching"
               },
