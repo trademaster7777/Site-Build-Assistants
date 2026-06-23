@@ -14,7 +14,7 @@ export default function Projects() {
   }, []);
 
   const projects = [
-    { id: 1, caption: "Track loader performing bulk earthwork — Bucks County, PA", category: "Site Development" },
+    { id: 1, caption: "Excavation Backfilling Foundation — Bucks County, PA", category: "Site Development" },
     { id: 2, caption: "Precision laser grading — residential site, Montgomery County, PA", category: "Site Development" },
     { id: 3, caption: "Stormwater Basin Installation — Chester County, PA", category: "Utilities" },
     { id: 4, caption: "Municipal water service connection — Delaware County, PA", category: "Infrastructure" },
