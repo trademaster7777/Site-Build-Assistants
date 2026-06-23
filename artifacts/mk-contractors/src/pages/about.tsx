@@ -108,7 +108,7 @@ export default function About() {
             {[
               { title: "Track Skid Steers", desc: "Site grading, backfill, material handling", imgLabel: "Photo: Track Skid Steer on site" },
               { title: "Mini Excavators", desc: "Precision trenching, utility excavation", imgLabel: "Photo: Mini Excavator trenching" },
-              { title: "Compactors", desc: "Soil and trench compaction", imgLabel: "Photo: Trench compactor" },
+              { title: "Large Excavator", desc: "Bulk excavation, mass earthmoving, deep digging", imgLabel: "Photo: Large excavator on site" },
               { title: "Dump Trucks", desc: "Bulk material hauling and earthmoving", imgLabel: "Photo: Dump truck hauling fill" }
             ].map((item, idx) => (
               <div key={idx} className="group">
