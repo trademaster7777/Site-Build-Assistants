@@ -25,7 +25,7 @@ export default function Projects() {
     { id: 9, caption: "Concrete Installation — poured walkway and entry steps", category: "Site Development" },
     { id: 10, caption: "PFAS Site Excavation", category: "Infrastructure" },
     { id: 11, caption: "Foundation Backfilling — Chester County, PA", category: "Site Development" },
-    { id: 12, caption: "Stormwater management system — Delaware County, PA", category: "Infrastructure" }
+    { id: 12, caption: "Stormwater management system — Bucks County, PA", category: "Infrastructure" }
   ];
 
   const filters = ["All", "Site Development", "Utilities", "Infrastructure"];
