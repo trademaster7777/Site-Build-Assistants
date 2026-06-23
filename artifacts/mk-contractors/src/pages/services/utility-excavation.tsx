@@ -15,7 +15,8 @@ export default function UtilityExcavation() {
       heroObjectPosition="center 35%"
       overview={[
         "Utility excavation is the trenching itself — the disciplined cutting, shoring, bedding, and backfilling that makes underground infrastructure work. While our Public Sector practice handles bid-driven municipal work, this service line focuses on private utility trenching for commercial property owners, developers, electricians, plumbers, mechanical contractors, and homeowners who need a trench cut clean, deep, and safe.",
-        "We bring the right machine for the trench — mini excavators for tight, shallow runs in finished landscaping, larger excavators with shoring boxes for deep sanitary or storm runs, and trench compactors to bring the backfill back to spec. Our crews routinely work on commercial buildouts, parking lot retrofits, restaurant gas and grease line installations, EV charger conduit runs, generator pads, and emergency private service repairs."
+        "We bring the right machine for the trench — mini excavators for tight, shallow runs in finished landscaping, larger excavators with shoring boxes for deep sanitary or storm runs, and trench compactors to bring the backfill back to spec. Our crews routinely work on commercial buildouts, parking lot retrofits, restaurant gas and grease line installations, EV charger conduit runs, generator pads, and emergency private service repairs.",
+        "Our scope also includes interior saw cutting and utility excavation for water, electrical, and sewer lines inside existing buildings — cutting and removing concrete slab, trenching beneath the floor, setting the new line, and restoring the slab. We support specialized commercial work including data center utility infrastructure, electric vehicle (EV) charging station installations, and backup generator utility excavation — running the conduit, fuel, and service trenches that keep mission-critical and standby power systems online."
       ]}
       capabilities={[
         {
@@ -33,6 +34,18 @@ export default function UtilityExcavation() {
         {
           title: "Septic & Tank Excavation, Removal, and Abandonment",
           description: "Excavation for new private septic systems, drain field installation, oil tank removal, and code-compliant abandonment of decommissioned septic pits."
+        },
+        {
+          title: "Interior Saw Cutting & Under-Slab Excavation",
+          description: "Interior saw cutting and utility excavation for water, electrical, and sewer inside existing buildings — slab removal, under-floor trenching, line installation, and slab restoration."
+        },
+        {
+          title: "Data Center & EV Charging Station Utilities",
+          description: "Utility and electrical trenching for data center infrastructure and electric vehicle (EV) charging stations — conduit runs and service feeds for high-demand commercial power systems."
+        },
+        {
+          title: "Backup Generator Utility Excavation",
+          description: "Conduit, fuel, and service trenching for standby and backup generators — coordinated with the electrician and fuel installer to keep critical systems powered during outages."
         }
       ]}
       faqs={[
