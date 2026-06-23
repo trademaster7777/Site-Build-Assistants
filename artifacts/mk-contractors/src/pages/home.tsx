@@ -145,7 +145,7 @@ export default function Home() {
               {
                 icon: Layers,
                 title: "Site Development - Residential",
-                desc: "Complete site preparation, grading, land clearing, and earthwork for commercial construction.",
+                desc: "Complete site preparation, grading, land clearing, and earthwork for residential construction.",
                 link: "/services/commercial-site-development",
                 imgLabel: "Photo: Commercial grading with dozer"
               },
