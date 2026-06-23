@@ -11,7 +11,7 @@ export default function About() {
     document.title = "About M&K Contractors LLC | Pennsylvania Excavation Experts";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Learn about M&K Contractors LLC — a family-owned excavation and site contracting firm founded in 2018 by Mike and Sam. Serving PA with 20+ years of experience. No subcontracting.");
+      metaDescription.setAttribute("content", "Learn about M&K Contractors LLC — a family-owned excavation and site contracting firm founded in 2021 by Mike and Sam. Serving PA with 20+ years of experience. No subcontracting.");
     }
   }, []);
 
@@ -46,7 +46,7 @@ export default function About() {
               <div className="section-divider mb-8 md:mb-10" />
               <div className="space-y-5 md:space-y-6 text-base md:text-lg text-gray-600 leading-[1.8]">
                 <p>
-                  M&K Contractors LLC was founded in 2018 by Mike and Sam — two industry veterans with a combined 20-plus years of experience in excavation, heavy equipment operation, and site contracting. The company was built from the ground up with a straightforward philosophy: do the work right, do it ourselves, and treat every client with complete transparency. What started as a small operation has grown into a trusted specialty contracting firm serving general contractors, developers, and municipalities across Eastern and Central Pennsylvania.
+                  M&K Contractors LLC was founded in 2021 by Mike and Sam — two industry veterans with a combined 20-plus years of experience in excavation, heavy equipment operation, and site contracting. The company was built from the ground up with a straightforward philosophy: do the work right, do it ourselves, and treat every client with complete transparency. What started as a small operation has grown into a trusted specialty contracting firm serving general contractors, developers, and municipalities across Eastern and Central Pennsylvania.
                 </p>
                 <p>
                   Our approach is simple: stay focused on what we do best. We do not take on work outside our expertise, and we do not subcontract our projects to third parties. When M&K wins a bid, our team and our equipment show up — every time. That consistency has earned us a reputation for reliability that we protect on every single job.
