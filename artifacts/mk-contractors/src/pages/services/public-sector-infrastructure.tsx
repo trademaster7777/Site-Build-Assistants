@@ -28,7 +28,7 @@ export default function PublicSector() {
         },
         {
           title: "Roadway Restoration & MPT",
-          description: "Road opening permits, traffic control plans, sub-base repair, and final paving restoration coordinated with PennDOT or local public works after underground work is complete."
+          description: "Sub-base repair and final paving restoration coordinated with PennDOT or local public works after underground work is complete."
         },
         {
           title: "Public Stormwater & MS4 Compliance",
