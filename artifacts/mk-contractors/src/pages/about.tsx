@@ -76,7 +76,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7">
             {[
               { icon: Users, title: "Direct Owner Contact", desc: "You will never be passed off to a call center or a junior project manager. Mike and Sam are personally involved in every project from bid to completion." },
-              { icon: Shield, title: "No Subcontracting — Ever", desc: "When you hire M&K Contractors, our team shows up. We do not win work just to hand it off to someone else." },
+              { icon: Shield, title: "No Subcontracting", desc: "When you hire M&K Contractors, our team shows up. We do not win work just to hand it off to someone else." },
               { icon: Truck, title: "Specialized Equipment Fleet", desc: "We own and maintain a fleet of excavators, skid steers, compactors, and dump trucks purpose-built for the work we do." },
               { icon: FileText, title: "Competitive, Transparent Pricing", desc: "We provide detailed, written proposals within one week of a site evaluation. Our pricing is fair, our communication is clear." },
             ].map((item, idx) => (
@@ -106,9 +106,9 @@ export default function About() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7">
             {[
-              { title: "Track Skid Steers (e.g., Kubota SVL97)", desc: "Site grading, backfill, material handling", imgLabel: "Photo: Track Skid Steer on site" },
-              { title: "Mini Excavators (e.g., Komatsu PC55)", desc: "Precision trenching, utility excavation", imgLabel: "Photo: Mini Excavator trenching" },
-              { title: "Compactors (e.g., Bomag Trench Roller)", desc: "Soil and trench compaction", imgLabel: "Photo: Trench compactor" },
+              { title: "Track Skid Steers", desc: "Site grading, backfill, material handling", imgLabel: "Photo: Track Skid Steer on site" },
+              { title: "Mini Excavators", desc: "Precision trenching, utility excavation", imgLabel: "Photo: Mini Excavator trenching" },
+              { title: "Compactors", desc: "Soil and trench compaction", imgLabel: "Photo: Trench compactor" },
               { title: "Dump Trucks", desc: "Bulk material hauling and earthmoving", imgLabel: "Photo: Dump truck hauling fill" }
             ].map((item, idx) => (
               <div key={idx} className="group">
