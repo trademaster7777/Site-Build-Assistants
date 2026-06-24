@@ -45,4 +45,13 @@ pnpm workspace monorepo using TypeScript. Contains the M&K Contractors LLC marke
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 - `pnpm --filter @workspace/mk-contractors run dev` — run M&K Contractors site locally
 
+## Hosting on Vercel (GitHub)
+
+The M&K Contractors site is a static Vite SPA and can be deployed to Vercel directly from GitHub. Setup is committed in the repo:
+- `vercel.json` (repo root): build command `pnpm --filter @workspace/mk-contractors run build`, output `artifacts/mk-contractors/dist/public`, and an SPA rewrite (`/(.*) → /index.html`) so wouter client-side routes work on refresh/deep-links.
+- `package.json` pins `packageManager: pnpm@10.26.1` so Vercel installs with the right pnpm.
+- `vite.config.ts` makes `PORT` and `BASE_PATH` optional (Replit workflow sets them; on Vercel they're absent so `BASE_PATH` defaults to `/` and the build runs at the domain root).
+
+**Vercel project settings**: import the GitHub repo, keep Root Directory as the repo root (do NOT set it to the artifact folder — pnpm workspace install must run from root). Vercel auto-detects pnpm from the lockfile and reads `vercel.json` for build/output. No environment variables are required.
+
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
